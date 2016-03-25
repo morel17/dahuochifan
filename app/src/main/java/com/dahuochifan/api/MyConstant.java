@@ -193,18 +193,5 @@ public class MyConstant {
      */
     public final static int comment_height = 3018;
 
-    public static String PUCLIC_KEY = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOilTXrBT7+n7oud"
-            + "M8cQsIcZ66MFjvbHo8i9D04MlyiqoNKuPySXv+cGnojnJBSGVaXeWoqe33g9+8Hb"
-            + "QmWoIszUXoD0ETZFL8uATeuVXVI4bKCPf4omrRQ8gO8iWp00GexjSB+vR2SXo40p"
-            + "ZqN+OYew/jN8Y+8WBge0AdQ2oppZAgMBAAECgYAEizX4L85e7+i40VkxiiHogZkY"
-            + "lgM0zrFkOk0SOSy6npqFguG41T3qRTbTdbA+tmD13GHoUzIKJyvDnYSud5o2XGR4"
-            + "p5jjK4t79E0Ao8jYKMxRwxvHX4PWuqLDzZGHlPO1zexOOBjrUg7B/g0e7z7F8pZN"
-            + "qiKOAUFK7H4Lf7oQAQJBAP+FBy0SIeYhlJDQtU6ta0VFppKH/Su5VSqVgf5ZAOBD"
-            + "WZ0AqtZfyE5R1lfjQhvKcwvFRDeLAO5S0ptpopa73Z0CQQDpFUQp41N8H+otsp+3"
-            + "/YNr20Oz29q4tbKTOInfvWFuYTjZDqDERu1KgOd04/u2F6Rfknv7NBoxcMWKADIR"
-            + "/TDtAkAl9JW/TS056Q0PgeEcwcfob1Mx+v9RamNLQxAfPwtRRM/f8YRu+aVgdOmY"
-            + "/ooIZMc4HWJnub82p5jfOw7KwzdFAkEAsruDBJf0eddDTP2Paph1Qazm0rIBm+iA"
-            + "4lHVsANaBjl5TUDhWQGGjr4gPstgRrcEbeE3P18pwsXWRMd3ncHI1QJAQKt8Iyhy"
-            + "aflqKk1VFo+A19SluBvse9xdZQkaNkIGZiuPYDtnBEl56Z59/A7DK38sOsN0XzAs"
-            + "MX7ZROHYznc44g==";
+    public static String PUCLIC_KEY = "can't tell u";
 }
