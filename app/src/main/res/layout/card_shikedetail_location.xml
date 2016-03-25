@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_location"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/cardView_three"
+    android:layout_marginLeft="@dimen/width_1_80"
+    android:layout_marginRight="@dimen/width_1_80"
+    android:layout_marginTop="@dimen/dh_2"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="@dimen/dh_2"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/location_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:background="@drawable/white_press_selector"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/distance_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dh_8"
+            android:paddingTop="@dimen/dh_8"
+            android:text="食客位置"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/distance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/distance_others_tv"
+            android:textSize="@dimen/text_size_6"
+
+            />
+
+        <ImageView
+            android:layout_width="@dimen/width_4_80"
+            android:layout_height="@dimen/width_4_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/iconfont" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

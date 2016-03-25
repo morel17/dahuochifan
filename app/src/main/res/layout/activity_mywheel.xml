@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/buttonll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/white_press_selector"
+            android:gravity="center"
+            android:padding="@dimen/width_3_80"
+            android:text="@string/cancel"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_9" />
+
+        <TextView
+            android:id="@+id/ok_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/white_press_selector"
+            android:gravity="center"
+            android:padding="@dimen/width_3_80"
+            android:text="@string/ok"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonll"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.dahuochifan.liandong.widget.WheelView
+            android:id="@+id/id_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.dahuochifan.liandong.widget.WheelView
+            android:id="@+id/id_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

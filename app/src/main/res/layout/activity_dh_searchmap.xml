@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.DhLocationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/top_toolbar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/map_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/recycler_rl"
+            android:background="@color/maincolor_new">
+
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.amap.api.maps.MapView>
+
+            <View
+                android:id="@+id/center_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/mark_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/center_iv"
+                android:layout_toRightOf="@+id/center_iv"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/hj_change_address_map_tag"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/search_btn"
+                android:layout_width="@dimen/dh_48"
+                android:layout_height="@dimen/dh_48"
+                android:background="@drawable/lightwhite_selector"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dh_8"
+                android:padding="@dimen/dh_8"
+                android:src="@drawable/dh_location_selector"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/dh_8"
+        android:layout_marginRight="@dimen/dh_8"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+            <AutoCompleteTextView
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@null"
+                android:hint="输入地址查找"
+                android:paddingLeft="@dimen/dh_48"
+                android:paddingRight="@dimen/dh_8"
+                android:completionThreshold="1"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                android:textColorHint="@color/black_second_tittle"
+                app:layout_textSizePercent="26.5%" />
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/search_rl"
+                android:layout_width="@dimen/dh_48"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/dh_search_map"
+                    app:layout_heightPercent="58%w"
+                    app:layout_widthPercent="58%w" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_rl"
+        android:visibility="gone" />
+
+</RelativeLayout>

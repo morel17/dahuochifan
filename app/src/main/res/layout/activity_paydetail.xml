@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include layout="@layout/top_rl" />
+
+    <RelativeLayout
+        android:id="@+id/info_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_13_80"
+        android:layout_below="@id/toprl"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_4_80" >
+
+        <com.dahuochifan.ui.views.CircleImageView
+            android:id="@+id/customer_iv"
+            android:layout_width="@dimen/width_7_80"
+            android:layout_height="@dimen/width_7_80"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/customer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_5_80"
+            android:layout_toRightOf="@+id/chef_iv"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/price_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_21_80"
+        android:layout_below="@id/info_rl"
+        android:background="@drawable/underline_gray_bottom"
+        android:padding="@dimen/width_3_80" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易金额"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_4" />
+
+        <com.bear.risenumbertest.lib.RiseNumberTextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="200"
+            android:textColor="@color/black_70"
+            android:textSize="@dimen/text_size_23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_3_80"
+            android:layout_toLeftOf="@+id/price_tv"
+            android:text="+"
+            android:textColor="@color/black_70"
+            android:textSize="@dimen/text_size_20" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@id/price_rl"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_3_80"
+        android:paddingRight="@dimen/width_3_80" >
+
+        <TextView
+            android:id="@+id/name_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="对方账号："
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:layout_toRightOf="@id/name_one"
+            android:text="ssss"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/type_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@id/name_rl"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_3_80"
+        android:paddingRight="@dimen/width_3_80" >
+
+        <TextView
+            android:id="@+id/type_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="商品信息："
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/tag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:layout_toRightOf="@id/type_one"
+            android:background="@color/tag_bg1"
+            android:padding="@dimen/width_0_80"
+            android:text="ssss"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4" />
+
+        <TextView
+            android:id="@+id/level_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:layout_toRightOf="@id/tag_tv"
+            android:text="搭伙私房菜"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_5" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pay_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_rl"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:text="收款方式："
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+
+    <TextView
+        android:id="@+id/pay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_rl"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:layout_toRightOf="@id/pay_one"
+        android:text="支付宝"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+
+    <TextView
+        android:id="@+id/create_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pay_one"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:text="创建日期："
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+
+    <TextView
+        android:id="@+id/create_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pay_one"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:layout_toRightOf="@id/create_tv"
+        android:text="2015"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+	<TextView
+        android:id="@+id/order_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_tv"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:text="订单编号："
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+	<TextView
+        android:id="@+id/order_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_tv"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_3_80"
+        android:layout_toRightOf="@id/order_tv"
+        android:text="sdsdsddwd"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+</RelativeLayout>

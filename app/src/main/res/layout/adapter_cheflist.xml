@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dh_2"
+        android:layout_marginLeft="@dimen/width_1_80"
+        android:layout_marginRight="@dimen/width_1_80"
+        android:layout_marginTop="@dimen/dh_2"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/dh_2"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_press_selector"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/width_47_80">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/width_47_80"
+                    android:background="@drawable/list_bg" />
+
+                <ImageView
+                    android:id="@+id/chef_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/width_47_80"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/distence_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/width_3_80"
+                    android:background="@color/halftransparent"
+                    android:paddingBottom="@dimen/width_0_80"
+                    android:paddingLeft="@dimen/width_2_80"
+                    android:paddingRight="@dimen/width_2_80"
+                    android:paddingTop="@dimen/width_0_80"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_10" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/info_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chef_head_iv">
+
+                <TextView
+                    android:id="@+id/nick_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_16"
+                    android:gravity="center"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <RelativeLayout
+                    android:id="@+id/confirm_rl"
+                    android:layout_width="@dimen/width_3_80"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_8"
+                    android:layout_toRightOf="@+id/nick_name_tv">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_3_80"
+                        android:layout_height="@dimen/width_3_80"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/chef_confirm" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/chef_confirm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/width_0_80"
+                    android:layout_toRightOf="@+id/confirm_rl"
+                    android:gravity="center"
+                    android:text="私厨认证"
+                    android:textColor="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_3" />
+
+                <RelativeLayout
+                    android:id="@+id/order_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dh_16"
+                    android:paddingBottom="@dimen/dh_3"
+                    android:paddingTop="@dimen/dh_3">
+
+                    <TextView
+                        android:id="@+id/order_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/width_1_80"
+                        android:paddingLeft="@dimen/width_2_80"
+                        android:paddingRight="@dimen/width_2_80"
+                        android:paddingTop="@dimen/width_1_80"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_4" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_rl">
+
+                <TextView
+                    android:id="@+id/other_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_16"
+                    android:text="口味："
+                    android:textColor="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:id="@+id/province_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/other_iv"
+                    android:textColor="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:id="@+id/province2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_8"
+                    android:layout_toRightOf="@+id/province_tv"
+                    android:textColor="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:id="@+id/province3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_8"
+                    android:layout_marginTop="@dimen/dh_8"
+                    android:layout_toRightOf="@+id/province2_tv"
+                    android:textColor="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:id="@+id/province4_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_8"
+                    android:layout_marginTop="@dimen/dh_8"
+                    android:layout_toRightOf="@+id/province3_tv"
+                    android:textColor="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/actiivty_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottom_rl">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_cyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/other_iv2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/actiivty_rl"
+                android:layout_marginTop="@dimen/dh_8"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/other_iv2"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/like_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_press_selector"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dh_16"
+                    android:paddingTop="@dimen/dh_16">
+
+                    <TextView
+                        android:id="@+id/like_tv"
+                        android:layout_width="@dimen/width_3_80"
+                        android:layout_height="@dimen/width_3_80"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/like_selector2"
+                        android:textColor="@color/text_second_color_primary" />
+
+                    <TextView
+                        android:id="@+id/like_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/like_tv"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/text_size_4" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/collect_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_press_selector"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dh_16"
+                    android:paddingTop="@dimen/dh_16">
+
+                    <TextView
+                        android:id="@+id/collect_tv"
+                        android:layout_width="@dimen/width_3_80"
+                        android:layout_height="@dimen/width_3_80"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/collect_selector2"
+                        android:textColor="@color/text_second_color_primary" />
+
+                    <TextView
+                        android:id="@+id/collect_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/collect_tv"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/text_size_4" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eat_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dh_16"
+                    android:paddingTop="@dimen/dh_16">
+
+                    <TextView
+                        android:id="@+id/eat_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="吃"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/text_size_5" />
+
+                    <TextView
+                        android:id="@+id/eat_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/eat_tv"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/text_size_5" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.dahuochifan.ui.views.CircleImageView
+                android:id="@+id/chef_head_iv"
+                android:layout_width="@dimen/width_9_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="@dimen/width_41_80"
+                app:border_color="@color/white" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

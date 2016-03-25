@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.DhLocationActivity">
+
+    <include layout="@layout/top_toolbar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/map_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/recycler_rl"
+            android:background="@color/maincolor_new">
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

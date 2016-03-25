@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_toolbar" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/top_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_icon"
+            android:scaleType="center"
+            app:layout_heightPercent="19.179%w"
+            app:layout_marginTopPercent="8.33%h"
+            app:layout_widthPercent="30.463%w" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_iv"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="4%h">
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColorHint="@color/text_more_light"
+                android:textSize="@dimen/text_size_7"
+                android:theme="@style/AppEditTheme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneInput"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="4%h">
+
+            <EditText
+                android:id="@+id/pass_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColorHint="@color/text_more_light"
+                android:textSize="@dimen/text_size_7"
+                android:theme="@style/AppEditTheme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.dahuochifan.ui.views.ripple.RippleView
+            android:id="@+id/login_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passInput"
+            android:background="@drawable/card_press_bg_login"
+            android:gravity="center"
+            android:paddingBottom="@dimen/width_2_80"
+            android:paddingTop="@dimen/width_2_80"
+            android:text="@string/login_complete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_9"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="7%h"
+            ripple:alpha_Factor="0.7"
+            ripple:hover="true"
+            ripple:ripple_Color="@color/white" />
+
+        <TextView
+            android:id="@+id/register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_complete"
+            android:layout_marginTop="@dimen/dh_8"
+            android:paddingBottom="@dimen/dh_16"
+            android:paddingRight="@dimen/dh_16"
+            android:paddingTop="@dimen/dh_16"
+            android:text="用户注册"
+            android:textColor="@color/text_light"
+            app:layout_marginLeftPercent="11.1%w" />
+
+        <TextView
+            android:id="@+id/forget_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/login_complete"
+            android:layout_marginTop="@dimen/dh_8"
+            android:paddingBottom="@dimen/dh_16"
+            android:paddingLeft="@dimen/dh_16"
+            android:paddingTop="@dimen/dh_16"
+            android:text="忘记密码"
+            android:textColor="@color/text_light"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/start_wxlogin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            app:layout_heightPercent="10%w"
+            app:layout_widthPercent="45%w">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/wechat_login_ic"
+                android:scaleType="fitXY"
+                app:layout_heightPercent="58%h"
+                app:layout_widthPercent="55.555%w" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</RelativeLayout>

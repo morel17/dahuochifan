@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/discount_unused_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:paddingBottom="@dimen/dh_16"
+    android:paddingLeft="@dimen/width_1_80"
+    android:paddingRight="@dimen/width_1_80"
+    android:paddingTop="@dimen/dh_16">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/price_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_heightPercent="8.271%w">
+
+        <TextView
+            android:id="@+id/tv_other_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="查看过期 / "
+            android:textColor="@color/maincolor_new"
+            app:layout_textSizePercent="35.7%" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_other_one"
+            android:text="已使用红包  >>"
+            android:textColor="@color/maincolor_new"
+            app:layout_textSizePercent="35.7%" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

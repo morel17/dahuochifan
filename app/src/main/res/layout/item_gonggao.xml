@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_gray"
+    android:padding="@dimen/width_3_80" >
+
+    <ImageView
+        android:id="@+id/trash_iv"
+        android:layout_width="@dimen/width_5_80"
+        android:layout_height="@dimen/width_5_80"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/trash_can_selector" />
+
+    <TextView
+        android:id="@+id/gonggao_tv"
+        style="@style/m_w"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/trash_iv"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_5" />
+
+</RelativeLayout>

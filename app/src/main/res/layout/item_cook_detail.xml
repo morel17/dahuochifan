@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/cook_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_9_80" >
+
+        <LinearLayout
+            android:id="@+id/center_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/level_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_1_80"
+                android:layout_toRightOf="@id/center_iv"
+                android:textColor="@color/cooklistinfo_textcolor"
+                android:textSize="@dimen/text_size_7" />
+
+            <RelativeLayout
+                android:id="@+id/tag_rl_left"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_1_80"
+                android:layout_toLeftOf="@id/center_iv"
+                android:background="@color/tag_bg1"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/tag_tv"
+                    android:layout_width="@dimen/width_12_80"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="上海"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_5" />
+
+                <ImageView
+                    android:id="@+id/tag_iv"
+                    android:layout_width="@dimen/width_3_80"
+                    android:layout_height="@dimen/width_3_80"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/width_1_80"
+                    android:layout_toRightOf="@id/tag_tv"
+                    android:background="@drawable/arrow_down" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:layout_toRightOf="@id/center_ll"
+            android:background="@color/gray_l" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_3_80"
+            android:layout_toLeftOf="@id/center_ll"
+            android:background="@color/gray_l" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cook_mid_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cook_top_rl"
+        android:paddingBottom="@dimen/width_1_80"
+        android:paddingLeft="@dimen/width_2_80"
+        android:paddingRight="@dimen/width_2_80"
+        android:paddingTop="@dimen/width_1_80" >
+
+        <RatingBar
+            android:id="@+id/myratingbar"
+            style="@style/roomRatingBarSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_1_80"
+            android:isIndicator="true"
+            android:numStars="5" />
+
+        <TextView
+            android:id="@+id/comments_tv"
+            android:layout_width="@dimen/width_16_80"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/card_main_chef"
+            android:gravity="center"
+            android:paddingBottom="@dimen/width_0_80"
+            android:paddingLeft="@dimen/width_1_80"
+            android:paddingRight="@dimen/width_1_80"
+            android:paddingTop="@dimen/width_0_80"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/center_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/cook_mid_rl"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/price_rl"
+        style="@style/m_w"
+        android:layout_below="@id/cook_mid_rl"
+        android:layout_marginTop="@dimen/width_1_80"
+        android:layout_toLeftOf="@id/center_view"
+        android:gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/add_rl"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/price_2"
+            android:padding="@dimen/width_2_80" >
+
+            <ImageView
+                android:id="@+id/add_iv"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_5_80"
+                android:background="@drawable/add_select" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/price_tv"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/delete_rl"
+            android:paddingLeft="@dimen/width_3_80"
+            android:text="0"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            android:id="@+id/price_2"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/price_tv"
+            android:paddingRight="@dimen/width_3_80"
+            android:text="￥"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <RelativeLayout
+            android:id="@+id/delete_rl"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/width_2_80" >
+
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_5_80"
+                android:layout_centerVertical="true"
+                android:background="@drawable/delete_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/m_w"
+        android:layout_height="@dimen/width_7_80"
+        android:layout_below="@id/price_rl"
+        android:layout_toLeftOf="@id/center_view" >
+
+        <TextView
+            style="@style/w_w"
+            android:layout_centerHorizontal="true"
+            android:text="人均价格"
+            android:textColor="@color/tag_bg1"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_rl"
+        style="@style/m_w"
+        android:layout_below="@id/cook_mid_rl"
+        android:layout_marginTop="@dimen/width_1_80"
+        android:layout_toRightOf="@id/center_view"
+        android:gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/add_rl2"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/person_2"
+            android:padding="@dimen/width_2_80" >
+
+            <ImageView
+                android:id="@+id/add_iv2"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_5_80"
+                android:layout_centerVertical="true"
+                android:background="@drawable/add_select" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/person_tv"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/delete_rl2"
+            android:paddingLeft="@dimen/width_3_80"
+            android:text="0"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            android:id="@+id/person_2"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/person_tv"
+            android:paddingRight="@dimen/width_3_80"
+            android:text="人"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <RelativeLayout
+            android:id="@+id/delete_rl2"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/width_2_80" >
+
+            <ImageView
+                android:id="@+id/delete_iv2"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_5_80"
+                android:layout_centerVertical="true"
+                android:background="@drawable/delete_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/m_w"
+        android:layout_height="@dimen/width_7_80"
+        android:layout_below="@id/person_rl"
+        android:layout_toRightOf="@id/center_view" >
+
+        <TextView
+            style="@style/w_w"
+            android:layout_centerHorizontal="true"
+            android:text="就餐人数"
+            android:textColor="@color/tag_bg1"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/top_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_34_80"
+        android:background="@color/gray_t"
+        android:clickable="true"
+        android:text=""
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- <color name="maincolor">#e95504</color> -->
+    <!--<color name="maincolor">#eb4704</color>-->
+    <color name="maincolor_new">#f86961</color>
+    <color name="maincolor_new_ripple">#65f86961</color>
+    <color name="maincolor_pressed">#7feb4704</color>
+    <color name="maincolor_ripple">#f2702f</color>
+    <color name="maincolorpressed">#e03614</color>
+    <color name="wechat_color">#4ab140</color>
+    <color name="cook_color">#fb4852</color>
+    <!-- <color name="mainbg">#fdf1e9</color> -->
+    <color name="mainbg">#F4F2F2</color>
+    <color name="mainbg_new">#e3eae9</color>
+    <color name="mainbg2">#fafafa</color>
+    <color name="maingreen">#82bf24</color>
+    <color name="maingreen_tv">#82e413</color>
+    <color name="maingreen_gv">#687205</color>
+    <color name="mainorange">#fc7e00</color>
+    <color name="mainorange_ripple">#65fc7e00</color>
+    <color name="line_color">#d2d2d3</color>
+    <color name="edtihint_color">#5d5b5a</color>
+    <color name="white">#ffffff</color>
+    <color name="white_70">#b2ffffff</color>
+    <color name="white_90">#e5ffffff</color>
+    <color name="gray">#ffcecece</color>
+    <color name="gray_t">#ffeeeeee</color>
+    <color name="gray_l">#ffeeeeee</color>
+    <color name="gray_order">#cfcfcf</color>
+    <color name="gray_top">#85807e</color>
+    <color name="black_order">#b2000000</color>
+    <color name="black_10">#1a000000</color>
+    <color name="startregister_color">#b8d19c94</color>
+    <color name="startregister_color_pressed">#7f721526</color>
+    <color name="ic_color">#b8d19c94</color>
+    <color name="ic_color_unable">#dddddd</color>
+    <color name="button_blue">#ff7342</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange_primary">#ff7342</color>
+    <color name="province_line_border">#ff7342</color>
+    <color name="white_pressed">#aaffffff</color>
+    <color name="halftransparent">#65000000</color>
+    <color name="halftransparent_n">#65000000</color>
+    <color name="halftransparent_f">#cb000000</color>
+    <color name="cooklistinfo_textcolor">#775252</color>
+    <color name="cooklistinfo_textcolor2">#7f775252</color>
+    <color name="cooklistinfo_textcolor_30">#4c775252</color>
+    <color name="tab_top_text_unselect">#775252</color>
+    <color name="tab_top_text_select">#e95504</color>
+    <!-- <color name="main_green">#728408</color> -->
+    <color name="main_green">#648E07</color>
+    <color name="main_green1">#7dc42a</color>
+    <color name="welcome_color">#4c775252</color>
+    <color name="welcome_color_pressed">#98775252</color>
+    <color name="order_deep_green">#71928408</color>
+    <color name="order_light_green">#65728408</color>
+    <color name="main_light">#f2986b</color>
+    <color name="main_light_pressed">#aaf2986b</color>
+    <color name="tag_green">#708030</color>
+    <color name="tag_bg1">#b4a9a9</color>
+    <!-- <color name="tag_bg1">#CB728408</color> -->
+    <color name="tag_bg11">#e95504</color>
+    <color name="tag_bg2">#708030</color>
+    <color name="tag_bg3">#755187</color>
+    <color name="tag_bg4">#442a56</color>
+    <color name="tag_bg5">#5e0f0f</color>
+    <!--<color name="tag_bg_all">#92bd91</color>-->
+    <color name="order_green_selected">#CB728408</color>
+    <color name="order_green_unselected">#32728408</color>
+    <color name="order_et_bg">#e4e4e2</color>
+    <color name="gonggao_gray">#bcbcbc</color>
+    <color name="address_gray">#65c2c8c7</color>
+    <color name="address_tv_gray">#98010000</color>
+    <color name="black">#000000</color>
+    <color name="black_24">#3c000000</color>
+    <color name="black_30">#4c000000</color>
+    <color name="black_65">#a5000000</color>
+    <color name="black_70">#b8000000</color>
+    <color name="black_second_tittle">#999999</color>
+    <color name="tm_color_1">#bdccd4</color>
+    <color name="tm_color_2">#440c39</color>
+    <color name="tm_color_3">#2563a0</color>
+    <color name="tm_color_4">#45ff00</color>
+    <color name="tm_color_5">#1b7c0a</color>
+    <color name="tm_color_6">#991717</color>
+    <color name="tm_color_7">#edd70c</color>
+    <color name="tm_color_8">#ea6c0f</color>
+    <color name="unable_gray">#c3c1c1</color>
+    <color name="light_gray">#efefef</color>
+    <color name="dark_gray">#4C535B</color>
+    <color name="dark_gray_press">#ff7e8a97</color>
+    <color name="pay_unpressed">#f86664</color>
+    <color name="pay_pressed">#fd4341</color>
+    <color name="text_color_primary">#494949</color>
+    <color name="text_second_color_primary">#7c7c7c</color>
+    <color name="cooklistinfo_textcolor_new">#7c7c7c</color>
+    <color name="text_tab_color_primary">#fdc9c9</color>
+    <color name="line_tab_color_primary">#d0cccc</color>
+    <color name="light_white">#f3f3f3</color>
+    <color name="light_grey">#ffbebebe</color>
+    <color name="text_dark">#494949</color>
+    <color name="text_light">#7c7c7c</color>
+    <color name="text_more_light">#989898</color>
+    <color name="text_gold">#ca9f89</color>
+    <color name="blue_light">#ff33b5e5</color>
+
+    <!-- A light Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A light Holo shade of gray -->
+    <color name="holo_gray_light">#33999999</color>
+    <!-- A light Holo shade of green -->
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <!-- A dark Holo shade of green -->
+    <color name="holo_green_dark">#ff669900</color>
+    <!-- A dark Holo shade of red -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple -->
+    <color name="holo_purple">#ffaa66cc</color>
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <!-- A really bright Holo shade of gray -->
+    <color name="holo_gray_bright">#33CCCCCC</color>
+    <!--阴影layout的颜色设置-->
+    <color name="default_shadow_color">#88757575</color>
+    <color name="default_fill_color">#ffffff</color>
+    <color name="shadow">#000000</color>
+</resources>

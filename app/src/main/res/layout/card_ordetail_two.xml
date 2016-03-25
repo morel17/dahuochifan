@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_two"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/cardView"
+    android:layout_marginLeft="@dimen/width_1_80"
+    android:layout_marginRight="@dimen/width_1_80"
+    android:paddingLeft="@dimen/dh_8"
+    android:paddingRight="@dimen/dh_8"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="@dimen/dh_1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/detail_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dh_16"
+            android:text="订单详情"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_8" />
+
+        <TextView
+            android:id="@+id/time_tv_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_all"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="用餐时间："
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_all"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/time_tv_others"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/trans_tv_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="配送方式："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/type_tvme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/trans_tv_others"
+            android:text="配送"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/test_tv_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trans_tv_others"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="口味　　："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/tag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trans_tv_others"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/test_tv_others"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/liuyan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/test_tv_others"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="备注　　："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/liuyan_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/test_tv_others"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/liuyan_tv"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/contact_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liuyan_et"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="联系人　："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liuyan_et"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/liuyan_tv"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="联系电话："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/phone_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/liuyan_tv"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="送餐地址："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/addressinfo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/liuyan_tv"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/order_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addressinfo_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="下单日期："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addressinfo_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/liuyan_tv"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="订单编号："
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/order_no_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_tv"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/liuyan_tv"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/orderpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_no"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="自动确认时间："
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_6"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/orderpay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_no"
+            android:layout_marginTop="@dimen/dh_12"
+            android:layout_toRightOf="@+id/orderpay"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_6"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderpay"
+            android:layout_marginTop="@dimen/dh_16" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

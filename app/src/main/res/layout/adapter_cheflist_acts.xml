@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/discount_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dh_16"
+    android:layout_below="@+id/bottom_rl"
+    android:layout_marginLeft="@dimen/dh_16"
+    android:layout_marginRight="@dimen/dh_16"
+    android:layout_marginTop="@dimen/dh_8">
+
+
+    <ImageView
+        android:id="@+id/discount_others"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_heightPercent="5%w"
+        app:layout_widthPercent="5%w" />
+
+    <TextView
+        android:id="@+id/discount_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dh_8"
+        android:layout_toRightOf="@+id/discount_others"
+        android:singleLine="true"
+        android:textColor="@color/black_second_tittle"
+        app:layout_textSizePercent="75%" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

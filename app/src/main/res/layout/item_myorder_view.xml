@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white">
+
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_iv"
+        android:layout_marginBottom="@dimen/dh_1"
+        android:layout_marginLeft="@dimen/width_1_80"
+        android:layout_marginRight="@dimen/width_1_80"
+        android:layout_marginTop="@dimen/dh_1"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/dh_1"
+        app:cardUseCompatPadding="true">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/top_rl"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/white_press_selector"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                app:layout_heightPercent="15.30%w"
+                app:layout_widthPercent="100%w">
+
+                <com.dahuochifan.ui.views.CircleImageView
+                    android:id="@+id/chef_avatar_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    app:layout_heightPercent="8.91%w"
+                    app:layout_widthPercent="8.91%w" />
+
+                <TextView
+                    android:id="@+id/chef_nickname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/chef_avatar_iv"
+                    android:textColor="@color/text_second_color_primary"
+                    app:layout_textSizePercent="30%" />
+
+                <TextView
+                    android:id="@+id/level_tv"
+                    style="@style/w_w"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/chef_nickname_tv"
+                    android:textColor="@color/text_second_color_primary"
+                    android:visibility="gone"
+                    app:layout_textSizePercent="30%" />
+
+                <TextView
+                    android:id="@+id/tag_tv"
+                    style="@style/w_w"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/level_tv"
+                    android:textColor="@color/maincolor_new"
+                    android:visibility="gone"
+                    app:layout_textSizePercent="30%" />
+
+                <ImageView
+                    android:id="@+id/right_iv"
+                    android:layout_width="@dimen/width_4_80"
+                    android:layout_height="@dimen/width_4_80"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/red_arrow" />
+
+                <TextView
+                    android:id="@+id/detail_tv"
+                    style="@style/w_w"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/width_0_80"
+                    android:layout_toLeftOf="@id/right_iv"
+                    android:text="详情"
+                    android:textColor="@color/cooklistinfo_textcolor_new"
+                    app:layout_textSizePercent="30%" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mid_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_rl"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/day_number_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp">
+
+                    <TextView
+                        android:id="@+id/day_number_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:textColor="@color/cooklistinfo_textcolor_new"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/mid_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/width_3_80"
+                        android:layout_toRightOf="@id/day_number_tv"
+                        android:gravity="center"
+                        android:text="午"
+                        android:textColor="@color/cooklistinfo_textcolor_new"
+                        android:textSize="@dimen/text_size_6" />
+
+                    <TextView
+                        android:id="@+id/night_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/width_3_80"
+                        android:layout_toRightOf="@id/mid_tv"
+                        android:gravity="center"
+                        android:text="晚"
+                        android:textColor="@color/cooklistinfo_textcolor_new"
+                        android:textSize="@dimen/text_size_6" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/person_tv"
+                    style="@style/w_w"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/all_price_tv"
+                    android:text="0人"
+                    android:textColor="@color/cooklistinfo_textcolor_new"
+                    android:textSize="@dimen/text_size_6" />
+
+                <TextView
+                    android:id="@+id/all_price_tv"
+                    style="@style/w_w"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:text="￥80"
+                    android:textColor="@color/cooklistinfo_textcolor_new"
+                    android:textSize="@dimen/text_size_12" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/mid_rl"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/status_tv"
+                    style="@style/w_w"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:text="未完成订单"
+                    android:textColor="@color/maincolor_new"
+                    android:textSize="@dimen/text_size_6" />
+
+                <TextView
+                    android:id="@+id/timeline_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/width_5_80"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dh_16"
+                    android:layout_toLeftOf="@+id/comment_tv"
+                    android:background="@drawable/card_new_orange"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/width_3_80"
+                    android:paddingRight="@dimen/width_3_80"
+                    android:text="订单跟踪"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:id="@+id/comment_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/width_5_80"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/card_new_orange"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/width_3_80"
+                    android:paddingRight="@dimen/width_3_80"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_4" />
+            </RelativeLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

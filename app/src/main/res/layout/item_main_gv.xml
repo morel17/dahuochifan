@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg" >
+
+    <TextView
+        android:id="@+id/prov_tv"
+        android:layout_width="@dimen/width_20_80"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="@drawable/card_bord_maincolor_selector"
+        android:paddingBottom="@dimen/width_2_80"
+        android:paddingTop="@dimen/width_2_80"
+        android:textColor="@color/gv_tv_selector"
+        android:textSize="@dimen/text_size_5" />
+
+    <View
+        android:id="@+id/viewone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/prov_tv"
+        android:layout_marginBottom="@dimen/width_2_80" />
+
+    <View
+        android:id="@+id/viewtwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/width_2_80"
+        android:layout_toLeftOf="@+id/prov_tv" />
+
+</RelativeLayout>

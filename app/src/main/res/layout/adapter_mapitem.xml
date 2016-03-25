@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/map_address_rl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/white_press_selector"
+    android:layout_height="48dp">
+
+    <TextView
+        android:id="@+id/map_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cooklistinfo_textcolor_new"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/dh_8"
+        android:layout_marginRight="@dimen/dh_8"
+        android:layout_centerVertical="true"
+        app:layout_textSizePercent="27%" />
+    <TextView
+        android:id="@+id/map_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_tv"
+        android:textColor="@color/black_second_tittle"
+        android:layout_marginTop="@dimen/width_0_80"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/dh_8"
+        android:layout_marginRight="@dimen/dh_8"
+        android:layout_centerVertical="true"
+        app:layout_textSizePercent="25%" />
+</com.zhy.android.percent.support.PercentLinearLayout>

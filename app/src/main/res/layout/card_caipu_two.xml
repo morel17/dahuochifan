@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_caipu_two"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/cardView_caipu_one"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dh_8">
+
+        <TextView
+            android:id="@+id/caixi_one_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="擅长菜系"
+            android:textColor="@color/text_second_color_primary"
+            android:textSize="@dimen/text_size_6"
+
+            />
+
+        <TextView
+            android:id="@+id/caixi_two_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_toRightOf="@+id/caixi_one_tv"
+            android:textColor="@color/text_second_color_primary"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/nashou_one_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caixi_two_tv"
+            android:layout_marginTop="@dimen/dh_8"
+            android:text="拿 手 菜"
+            android:textColor="@color/text_second_color_primary"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/nashou_two_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caixi_two_tv"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_8"
+            android:layout_toRightOf="@+id/nashou_one_tv"
+            android:text="asfafadfadfasdf"
+            android:textColor="@color/text_second_color_primary"
+            android:textSize="@dimen/text_size_6" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

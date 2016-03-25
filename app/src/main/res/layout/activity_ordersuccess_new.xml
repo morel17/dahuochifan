@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/m_m"
+    android:background="#f4f4f4"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/top_toolbar" />
+
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView_order_sucess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
+
+
+        <RelativeLayout
+            android:id="@+id/xx_rl"
+            android:layout_width="@dimen/width_62_80"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/main_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/banner_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_1_80"
+                    android:background="@color/maincolor_new" />
+
+                <TextView
+                    android:id="@+id/shifu_tv"
+                    android:layout_width="@dimen/width_52_80"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/banner_iv"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/width_3_80"
+                    android:text="实付"
+                    android:textColor="@color/maincolor_new"
+                    android:textSize="@dimen/text_size_5" />
+            <RelativeLayout
+                android:id="@+id/price_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shifu_tv"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/dh_16"
+                android:paddingBottom="@dimen/dh_16"
+                android:layout_marginBottom="@dimen/width_3_80"
+                >
+                <TextView
+                    android:id="@+id/price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="300"
+                    android:textColor="@color/maincolor_new"
+                    android:textSize="60sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/price_tv"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    android:text="￥"
+                    android:layout_alignBottom="@+id/price_tv"
+                    android:textColor="@color/maincolor_new"
+                    android:layout_marginBottom="@dimen/width_2_80"
+                    android:textSize="30sp" />
+</RelativeLayout>
+                <TextView
+                    android:id="@+id/pay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/price_rl"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/card_new_orange"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/width_1_80"
+                    android:paddingLeft="@dimen/width_5_80"
+                    android:paddingRight="@dimen/width_5_80"
+                    android:paddingTop="@dimen/width_1_80"
+                    android:text="立即付款"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_7" />
+
+
+                <RelativeLayout
+                    android:id="@+id/total_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pay_tv"
+                    android:layout_marginLeft="@dimen/width_3_80"
+                    android:layout_marginRight="@dimen/width_3_80"
+                    android:layout_marginTop="@dimen/width_3_80">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="总金额"
+                        android:textColor="#5d5d5d"
+                        android:textSize="@dimen/text_size_7" />
+
+                    <TextView
+                        android:id="@+id/price_tv_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="600元"
+                        android:textColor="@color/maincolor_new"
+                        android:textSize="@dimen/text_size_10" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/youhui_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/total_rl"
+                    android:layout_marginLeft="@dimen/width_3_80"
+                    android:layout_marginRight="@dimen/width_3_80"
+                    android:layout_marginTop="@dimen/width_3_80">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="优    惠"
+                        android:textColor="#5d5d5d"
+                        android:textSize="@dimen/text_size_7" />
+
+                    <TextView
+                        android:id="@+id/price_tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="600元"
+                        android:textColor="@color/maincolor_new"
+                        android:textSize="@dimen/text_size_10" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/gray_line"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_below="@id/main_rl"
+                android:layout_marginTop="@dimen/width_3_80"
+                android:background="@drawable/underline_gray_bottom" />
+
+            <TextView
+                android:id="@+id/agin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/main_rl"
+                android:layout_below="@+id/gray_line"
+                android:layout_marginBottom="@dimen/width_3_80"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_marginTop="@dimen/width_3_80"
+                android:text="返回首页"
+                android:textColor="@color/maincolor_new"
+                android:textSize="@dimen/text_size_7" />
+
+            <TextView
+                android:id="@+id/share_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gray_line"
+                android:layout_marginTop="@dimen/width_3_80"
+                android:text="好友分享"
+                android:layout_alignRight="@+id/main_rl"
+                android:textColor="@color/maincolor_new"
+                android:layout_marginRight="@dimen/width_3_80"
+                android:textSize="@dimen/text_size_7" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

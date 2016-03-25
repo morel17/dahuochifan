@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/chef_name_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            app:layout_marginTopPercent="8.88%w">
+
+            <TextView
+                android:id="@+id/chef_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_8" />
+
+            <TextView
+                android:id="@+id/chef_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dh_16"
+                android:layout_toRightOf="@+id/chef_tv"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_size_6" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/detail_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/chef_name_rl"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/dhconfirm_selector"
+            app:layout_heightPercent="4.942%w"
+            app:layout_marginTopPercent="4.466%w"
+            app:layout_widthPercent="17.475%w" />
+
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_4"
+            app:layout_marginTopPercent="5.048%w" />
+
+        <ImageView
+            android:id="@+id/others_iv"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/address_tv"
+            android:background="@color/gray"
+            app:layout_marginTopPercent="5.048%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/info_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/rl_one"
+        android:background="@color/white"
+        app:layout_heightPercent="13.4%w">
+
+
+        <RelativeLayout
+            android:id="@+id/eat_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/collect_rl"
+            android:gravity="center"
+            app:layout_widthPercent="33.3333%w">
+
+            <TextView
+                android:id="@+id/eat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="吃"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_5" />
+
+            <TextView
+                android:id="@+id/eat_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/eat_tv"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_5" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/collect_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/like_rl"
+            android:gravity="center"
+            app:layout_widthPercent="33.3333%w">
+
+            <ImageView
+                android:id="@+id/collect_iv"
+                android:layout_width="@dimen/width_3_80"
+                android:layout_height="@dimen/width_3_80"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/collect_selector2"
+                android:textColor="@color/text_dark" />
+
+            <TextView
+                android:id="@+id/collect_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/collect_iv"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/like_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:layout_widthPercent="33.3333%w">
+
+            <ImageView
+                android:id="@+id/like_iv"
+                android:layout_width="@dimen/width_3_80"
+                android:layout_height="@dimen/width_3_80"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/like_selector2"
+                android:textColor="@color/text_dark" />
+
+            <TextView
+                android:id="@+id/like_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/like_iv"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_5" />
+        </RelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

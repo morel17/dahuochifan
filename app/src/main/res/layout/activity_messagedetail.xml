@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mainbg" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/title_tv"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/width_1_80"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tip_tv"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/width_1_80" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/width_2_80" >
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_30"
+                    android:textSize="@dimen/text_size_7"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/width_3_80"
+                    android:layout_toRightOf="@id/date_tv"
+                    android:textColor="@color/black_30"
+                    android:textSize="@dimen/text_size_7"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/content_tvme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_tv"
+                    android:layout_marginTop="@dimen/width_2_80"
+                    android:autoLink="all"
+                    android:lineSpacingExtra="@dimen/width_2_80"
+                    android:textColor="@color/black_65"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_7" />
+
+                <ImageView
+                    android:id="@+id/iv_one"
+                    android:layout_width="@dimen/width_78_80"
+                     android:layout_height="@dimen/width_47_80"
+                    android:layout_below="@id/content_tvme"
+                    android:layout_marginTop="@dimen/width_2_80"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_two"
+                    android:layout_width="@dimen/width_78_80"
+                     android:layout_height="@dimen/width_47_80"
+                    android:layout_below="@id/iv_one"
+                    android:layout_marginTop="@dimen/width_2_80"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_three"
+                    android:layout_width="@dimen/width_78_80"
+                    android:layout_height="@dimen/width_47_80"
+                    android:layout_below="@id/iv_two"
+                    android:layout_marginTop="@dimen/width_2_80"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="@dimen/width_3_80"
+        android:text="温馨提示:可长按或双击复制消息内容"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tip_tv"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/home2"
+        app:borderWidth="0dp"
+        app:theme="@style/Widget.Design.TabLayout.MorelTab" />
+
+</RelativeLayout>

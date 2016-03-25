@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toggle="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewCB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/width_1_80"
+        android:layout_marginRight="@dimen/width_1_80"
+        android:layout_marginTop="@dimen/dh_4"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/dh_1"
+        app:cardUseCompatPadding="true">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/one_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="5.55%w">
+
+                <TextView
+                    android:id="@+id/item_cb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="办公餐"
+                    app:layout_marginLeftPercent="4.62%w"
+                    app:layout_textSizePercent="4.26%" />
+
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/item_toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:layout_heightPercent="4.26%w"
+                    app:layout_marginRightPercent="4.62%w"
+                    app:layout_widthPercent="9.55%w"
+                    toggle:borderWidth="1px" />
+
+                <TextView
+                    android:id="@+id/tip_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/item_toggle"
+                    android:text="关菜品"
+                    app:layout_marginRightPercent="3.12%w"
+                    app:layout_textSizePercent="3%" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/one_rl">
+
+                <TextView
+                    android:id="@+id/item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥20"
+                    android:textColor="@color/maincolor_new"
+                    app:layout_marginBottomPercent="9.26%w"
+                    app:layout_marginLeftPercent="4.62%w"
+                    app:layout_marginTopPercent="9.26%w"
+                    app:layout_textSizePercent="4.26%" />
+
+                <TextView
+                    android:id="@+id/slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/item_price"
+                    android:text=" / "
+                    app:layout_textSizePercent="4.26%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/slash"
+                    android:text="份"
+                    app:layout_textSizePercent="3.33%" />
+
+                <TextView
+                    android:id="@+id/relay_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="限量"
+                    app:layout_marginLeftPercent="48.5%w"
+                    app:layout_textSizePercent="4.26%" />
+
+                <TextView
+                    android:id="@+id/item_relay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/relay_others"
+                    android:text="15份"
+                    android:textColor="@color/maincolor_new"
+                    app:layout_marginLeftPercent="4.62%w"
+                    app:layout_textSizePercent="4.26%" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

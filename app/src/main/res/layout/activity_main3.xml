@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/toprl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_5_6_80"
+        android:layout_alignParentTop="true"
+        android:background="#e3eae9" >
+
+        <ImageView
+            android:id="@+id/top_iv"
+            android:layout_width="@dimen/width_17_80"
+            android:layout_height="@dimen/width_4_80"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_2_80"
+            android:background="@drawable/top_logo" />
+
+        <ImageView
+            android:id="@+id/location_iv"
+            android:layout_width="@dimen/width_3_80"
+            android:layout_height="@dimen/width_3_80"
+            android:layout_alignBottom="@id/top_iv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/width_2_80"
+            android:background="@drawable/iconfont"
+            android:visibility="gone" />
+
+        <com.dahuochifan.ui.views.AutoScaleTextView
+            android:id="@+id/location_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/top_iv"
+            android:layout_marginLeft="@dimen/width_1_80"
+            android:layout_marginRight="@dimen/width_1_80"
+            android:layout_toLeftOf="@+id/location_iv"
+            android:layout_toRightOf="@+id/top_iv"
+            android:gravity="bottom|right"
+            android:textColor="@color/gray_top"
+            android:textSize="@dimen/text_size_3" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/main_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toprl" >
+
+        <FrameLayout
+            android:id="@+id/realtabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@android:id/tabhost" />
+
+        <android.support.v4.app.FragmentTabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_6_80"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainbg" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+        </android.support.v4.app.FragmentTabHost>
+    </RelativeLayout>
+</RelativeLayout>

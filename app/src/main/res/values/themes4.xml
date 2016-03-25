@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Holo.Light主题 -->
+    <style name="BaseTheme.Translucent">
+
+        <!-- 文本颜色 -->
+        <item name="text_color">@color/white</item>
+        <!-- 文本提示颜色 -->
+        <item name="text_hint_color">@color/edit_hint_wallpaper</item>
+        <!-- 搜索界面文本提示颜色 -->
+        <item name="search_text_color">@color/white</item>
+        <!-- 表情背景色 -->
+        <item name="bg_emotion">@color/transparent</item>
+    </style>
+
+    <style name="BaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+       <!--  <item name="android:progressBarStyle">@style/ProgressBar</item> -->
+        <item name="android:fadingEdgeLength">0.0dip</item>
+    <!--     <item name="android:actionBarStyle">@style/ActionBarStyle</item> -->
+      <!--   <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item> -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+        <!-- <item name="link_color">@color/link_color</item> -->
+        <item name="android:actionMenuTextColor">@color/white</item>
+
+        <!-- <item name="android:spinnerDropDownItemStyle">@android:style/Widget.Holo.Light.DropDownItem.Spinner</item> -->
+       <!--  <item name="android:actionOverflowButtonStyle">@style/CustomerOverflow</item> -->
+        <!-- <item name="android:homeAsUpIndicator">@drawable/ic_ab_back_holo_dark_am</item> -->
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <!-- 消除ActionBar下的阴影线 -->
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- SmoothProgressBar -->
+        <!--
+        <item name="spbStyle">@style/SmoothProgressBar</item>
+        <item name="cpbStyle">@style/CircularProgressBar</item>
+        -->
+
+
+        <!-- 文本颜色 -->
+        <item name="text_color">@color/edit_hint</item>
+        <!-- 文本提示颜色 -->
+        <item name="text_hint_color">@drawable/hint</item>
+        <!-- 搜索界面文本提示颜色 -->
+        <item name="search_text_color">@color/search_text_color</item>
+        <!-- 表情背景色 -->
+        <item name="bg_emotion">@color/bg_emotion</item>
+    </style>
+
+    <style name="BaseTheme.Wallpaper.Translucent"></style>
+
+    <style name="BaseTheme.Wallpaper">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+
+        <!-- 文本颜色 -->
+        <item name="text_color">@color/white</item>
+        <!-- 文本提示颜色 -->
+        <item name="text_hint_color">@color/edit_hint_wallpaper</item>
+        <!-- 搜索界面文本提示颜色 -->
+        <item name="search_text_color">@color/white</item>
+        <!-- 表情背景色 -->
+        <item name="bg_emotion">@color/transparent</item>
+    </style>
+
+</resources>

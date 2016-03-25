@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_toolbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/confrim_tv"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <RelativeLayout
+                android:id="@+id/name_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_marginRight="@dimen/width_3_80"
+                android:background="@drawable/underline_gray_bottom"
+                android:paddingBottom="@dimen/width_3_80"
+                android:paddingTop="@dimen/width_3_80">
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/name_tv"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入姓名"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:text="姓名"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/phone_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_rl"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_marginRight="@dimen/width_3_80"
+                android:background="@drawable/underline_gray_bottom"
+                android:paddingBottom="@dimen/width_3_80"
+                android:paddingTop="@dimen/width_3_80">
+
+                <EditText
+                    android:id="@+id/phone_number_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/phone_tv"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:text="手机号码"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/province_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone_rl"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_marginRight="@dimen/width_3_80"
+                android:background="@drawable/underline_gray_bottom"
+                android:paddingBottom="@dimen/width_3_80"
+                android:paddingTop="@dimen/width_3_80">
+
+                <TextView
+                    android:id="@+id/prov_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/right_img"
+                    android:layout_toRightOf="@+id/prov_title_tv"
+                    android:gravity="center_vertical|right"
+                    android:hint="地图选择"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/prov_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:text="地区信息"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <ImageView
+                    android:id="@+id/right_img"
+                    android:layout_width="@dimen/width_4_80"
+                    android:layout_height="@dimen/width_4_80"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dh_2"
+                    android:layout_marginRight="@dimen/dh_2"
+                    android:background="@drawable/location_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/district_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/province_rl"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_marginRight="@dimen/width_3_80"
+                android:background="@drawable/underline_gray_bottom"
+                android:paddingBottom="@dimen/width_3_80"
+                android:paddingTop="@dimen/width_3_80">
+
+                <EditText
+                    android:id="@+id/twon_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/town_tv"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="楼号门牌号"
+                    android:maxLength="40"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/black_second_tittle"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/town_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="楼号门牌号"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/moren_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/district_rl"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_marginRight="@dimen/width_3_80">
+
+                <TextView
+                    android:layout_width="@dimen/width_16_80"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|left"
+                    android:paddingBottom="@dimen/width_3_80"
+                    android:paddingTop="@dimen/width_3_80"
+                    android:singleLine="true"
+                    android:text="设为默认"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_4_80"
+                    android:layout_height="@dimen/width_4_80"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/width_3_80"
+                    android:src="@drawable/gou_selector2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/center_iv"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/moren_rl"
+                android:background="@color/gray" />
+
+            <!--
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_37_80"
+                android:layout_below="@+id/center_iv"
+                android:layout_weight="1"
+                android:background="@color/white" >
+            </RelativeLayout>
+            -->
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/confrim_tv"
+        android:layout_width="@dimen/dh_56"
+        android:layout_height="@dimen/dh_56"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dh_16"
+        android:src="@drawable/trash"
+        app:borderWidth="0dp"
+        app:theme="@style/Widget.Design.TabLayout.MorelTab" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/custom_progress_draw"
+        android:visibility="gone" />
+
+</RelativeLayout>

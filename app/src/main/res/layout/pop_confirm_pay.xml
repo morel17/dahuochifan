@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/one_rl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="11.1%w"
+        android:layout_marginRight="@dimen/dh_4"
+        android:layout_alignParentRight="true"
+        app:layout_heightPercent="11.1%w">
+
+        <ImageView
+            android:id="@+id/pop_close_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pop_close"
+            app:layout_heightPercent="40%w"
+            app:layout_widthPercent="40%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/two_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/one_rl"
+        app:layout_heightPercent="8.148%w">
+
+        <TextView
+            android:id="@+id/pop_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="0dp"
+            android:textColor="@color/maincolor_new"
+            app:layout_marginLeftPercent="4.62%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/pop_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/pop_price_tv"
+            android:textColor="@color/text_dark"
+            app:layout_marginLeftPercent="7.4%w"
+            app:layout_textSizePercent="52.27%" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/three_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/two_rl"
+        app:layout_heightPercent="4.26%w"
+        app:layout_marginTopPercent="11.1%w">
+
+        <TextView
+            android:id="@+id/average_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="人均"
+            android:textColor="@color/text_light"
+            app:layout_marginLeftPercent="4.62%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/pop_average_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/average_other"
+            android:textColor="@color/text_dark"
+            app:layout_marginLeftPercent="7.4%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/eatnumber_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="份数"
+            android:textColor="@color/text_light"
+            app:layout_marginLeftPercent="61%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/pop_eatnum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/eatnumber_others"
+            android:textColor="@color/text_dark"
+            app:layout_marginLeftPercent="7.4%w"
+            app:layout_textSizePercent="95%" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/four_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/three_rl"
+        app:layout_heightPercent="4.26%w"
+        app:layout_marginTopPercent="11.1%w">
+
+        <TextView
+            android:id="@+id/all_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="总计"
+            android:textColor="@color/text_light"
+            app:layout_marginLeftPercent="4.62%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/pop_all_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/all_other"
+            android:textColor="@color/text_dark"
+            app:layout_marginLeftPercent="7.4%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/discount_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="优惠"
+            android:textColor="@color/text_light"
+            app:layout_marginLeftPercent="61%w"
+            app:layout_textSizePercent="95%" />
+
+        <TextView
+            android:id="@+id/pop_discount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/discount_others"
+            android:textColor="@color/text_dark"
+            app:layout_marginLeftPercent="7.4%w"
+            app:layout_textSizePercent="95%" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.dahuochifan.ui.views.ripple.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pop_confirm_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dh_48"
+        android:layout_below="@+id/four_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/priceall_tv"
+        android:background="@color/maincolor_new"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_9"
+        app:layout_marginTopPercent="11.1%w"
+        ripple:alpha_Factor="0.7"
+        ripple:hover="true"
+        ripple:ripple_Color="@color/white" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/width_16_80"
+    android:background="@color/white"
+    android:padding="@dimen/width_3_80" >
+
+    <View
+        android:id="@+id/center_h"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true" />
+
+    <com.dahuochifan.ui.views.CircleImageView
+        android:id="@+id/userimg"
+        android:layout_width="@dimen/height_6_80"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center_h"
+        android:layout_marginBottom="@dimen/width_1_80"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_toRightOf="@id/userimg"
+        android:text="昵称昵称"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_6" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/width_5_80"
+        android:layout_below="@id/center_h"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_1_80"
+        android:layout_toRightOf="@id/userimg"
+        android:background="@drawable/circle_order_customer_order"
+        android:gravity="center"
+        android:text="6月6日"
+        android:paddingLeft="@dimen/width_2_80"
+        android:paddingRight="@dimen/width_2_80"
+        android:textSize="@dimen/text_size_4"
+        android:textColor="@color/white" />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/text_size_5"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/red_arrow"
+        />
+
+</RelativeLayout>

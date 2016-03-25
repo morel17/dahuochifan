@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/title_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_15_80"
+                android:background="@drawable/underline_gray_bottom" >
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="搭伙吃饭主厨申请"
+                    android:textColor="@color/maincolor_new"
+                    android:textSize="@dimen/text_size_9" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/name_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/title_rl"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="姓    名"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/width_1_80"
+                    android:drawableRight="@drawable/red_arrow"
+                    android:gravity="center"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gender_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/name_rl"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="性    别"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/man_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="男"
+                        android:textSize="@dimen/text_size_7" />
+
+                    <RadioButton
+                        android:id="@+id/woman_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女"
+                        android:textSize="@dimen/text_size_7" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/age_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/gender_rl"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="年    龄"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/age_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/width_1_80"
+                    android:drawableRight="@drawable/red_arrow"
+                    android:gravity="center"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/phone_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/age_rl"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="手机号"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/width_1_80"
+                    android:drawableRight="@drawable/red_arrow"
+                    android:gravity="center"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/address_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/phone_rl"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80" >
+
+                <TextView
+                    android:id="@+id/address_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="详细地址"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/address_tag"
+                    android:drawablePadding="@dimen/width_1_80"
+                    android:drawableRight="@drawable/red_arrow"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/qq_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/address_rl"
+                android:visibility="gone"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80" >
+
+                <TextView
+                    android:id="@+id/qq_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="QQ号"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:id="@+id/qq_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/qq_tag"
+                    android:drawablePadding="@dimen/width_1_80"
+                    android:drawableRight="@drawable/red_arrow"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cookpic_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/qq_rl"
+                android:background="@drawable/underline_selector"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="上传拿手菜照片资料"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/width_1_80"
+                    android:drawableRight="@drawable/red_arrow"
+                    android:gravity="center"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/other_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_below="@id/cookpic_rl"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="上传下两类证件照"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pic_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other_rl"
+                android:layout_marginTop="@dimen/width_1_80"
+                android:padding="@dimen/width_2_80"
+                android:visibility="gone" >
+
+                <View
+                    android:id="@+id/center_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true" />
+
+                <RelativeLayout
+                    android:id="@+id/id_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/width_1_80"
+                    android:layout_toLeftOf="@+id/center_iv" >
+
+                    <ImageView
+                        android:id="@+id/id_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/width_24_80"
+                        android:background="@drawable/card_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/width_3_80"
+                        android:text="身份证正面照"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_size_6" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/health_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/width_1_80"
+                    android:layout_toRightOf="@+id/center_iv" >
+
+                    <ImageView
+                        android:id="@+id/health_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/width_24_80"
+                        android:background="@drawable/card_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/health_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/width_3_80"
+                        android:text="健康证正面照"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_size_6" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.dahuochifan.ui.views.ripple.RippleView
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/apply_rp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic_rl"
+                android:layout_marginTop="@dimen/width_5_80"
+                android:background="@color/maincolor_new"
+                android:gravity="center"
+                android:padding="@dimen/width_3_80"
+                android:text="申请主厨"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_6"
+                ripple:alpha_Factor="0.7"
+                ripple:hover="true"
+                ripple:ripple_Color="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

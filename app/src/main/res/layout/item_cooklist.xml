@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.dahuochifan"
+    android:id="@+id/main_item_cooklist"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:paddingBottom="@dimen/width_1_80" >
+
+    <RelativeLayout
+        android:id="@+id/lunbo_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_48_80" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/width_48_80"
+            android:background="@drawable/list_bg" />
+
+        <com.dahuochifan.ui.views.play.SlidingPlayView
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/width_48_80"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/right_arrow_rl"
+            android:layout_width="@dimen/width_9_80"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="@dimen/width_7_80"
+                android:layout_height="@dimen/width_7_80"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/width_2_80"
+                android:background="@drawable/right_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/left_arrow_rl"
+            android:layout_width="@dimen/width_9_80"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true" >
+
+            <ImageView
+                android:id="@+id/left_arrow"
+                android:layout_width="@dimen/width_7_80"
+                android:layout_height="@dimen/width_7_80"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/width_2_80"
+                android:background="@drawable/left_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/width_8_80"
+            android:layout_alignBottom="@+id/viewpager"
+            android:background="@color/halftransparent" />
+
+        <LinearLayout
+            android:id="@+id/lunbobottomll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/width_8_80"
+            android:layout_alignBottom="@+id/viewpager"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="6" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/width_8_80"
+                android:layout_weight="5"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/like_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/like_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/width_0_80"
+                        android:layout_weight="1"
+                        android:src="@drawable/like_selector" />
+
+                    <TextView
+                        android:id="@+id/like_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collect_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/collect_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/width_0_80"
+                        android:layout_weight="1"
+                        android:src="@drawable/collect_selector" />
+
+                    <TextView
+                        android:id="@+id/collect_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eat_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/eat_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/width_0_80"
+                        android:layout_weight="1"
+                        android:src="@drawable/eat" />
+
+                    <TextView
+                        android:id="@+id/eat_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0吃货"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_3" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginTop="@dimen/width_36_80" >
+
+        <com.dahuochifan.ui.views.CircleImageView
+            android:id="@+id/circle_iv"
+            android:layout_width="@dimen/width_16_80"
+            android:layout_height="@dimen/width_16_80"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="@dimen/height_2_80"
+            android:paddingTop="@dimen/height_2_80"
+            app:border_color="@color/white"
+            app:border_width="2dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lunbo_rl"
+        android:layout_marginLeft="@dimen/width_2_80"
+        android:layout_marginRight="@dimen/width_2_80"
+        android:paddingBottom="@dimen/width_1_80"
+        android:paddingTop="@dimen/width_1_80" >
+
+        <TextView
+            android:id="@+id/nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/centerbottom_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/distance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/centerbottom_tv"
+            android:paddingBottom="@dimen/width_1_80"
+            android:paddingTop="@dimen/width_1_80"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/distance_tv"
+            android:singleLine="true"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+</RelativeLayout>

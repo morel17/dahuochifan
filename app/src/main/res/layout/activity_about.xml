@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/top_toolbar" />
+    <ImageView
+        android:id="@+id/app_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/width_8_80"
+        android:background="@drawable/login_icon"
+        android:scaleX="0.7"
+        android:scaleY="0.7" />
+
+    <TextView
+        android:id="@+id/app_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/width_2_80"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_6" />
+
+    <RelativeLayout
+        android:id="@+id/welcome_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_below="@id/app_tv"
+        android:layout_marginTop="@dimen/width_8_80"
+        android:background="@drawable/underline_selector">
+
+        <TextView
+            android:id="@+id/nickname_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_3_80"
+            android:drawableRight="@drawable/red_arrow"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="@dimen/width_10_80"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:gravity="center"
+            android:text="欢迎界面"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/check_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_below="@id/welcome_rl"
+        android:background="@drawable/underline_selector">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_3_80"
+            android:drawableRight="@drawable/red_arrow"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="@dimen/width_10_80"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:gravity="center"
+            android:text="检查更新"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_7" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/point_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_below="@id/check_rl"
+        android:background="@drawable/underline_selector">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_3_80"
+            android:drawableRight="@drawable/red_arrow"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="@dimen/width_10_80"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:gravity="center"
+            android:text="给搭伙吃饭打分"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_7" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rights_middle"
+        android:layout_centerHorizontal="true"
+        android:text="搭伙吃饭 版权所有"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_5" />
+
+    <TextView
+        android:id="@+id/rights_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rights_bottom"
+        android:layout_centerHorizontal="true"
+        android:text="Copyright © 2015 Dahuochifan"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_5" />
+
+    <TextView
+        android:id="@+id/rights_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/width_2_80"
+        android:text="All Rights Reserved."
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_5" />
+
+</RelativeLayout>

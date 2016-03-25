@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/back_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/chef_back"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/custom_progress_draw" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrHeaderBackground="@color/mainbg"
+        ptr:ptrHeaderTextColor="@color/cooklistinfo_textcolor" />
+
+</RelativeLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dh_2"
+    android:layout_marginLeft="@dimen/width_1_80"
+    android:layout_marginRight="@dimen/width_1_80"
+    android:layout_marginTop="@dimen/dh_2"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="@dimen/dh_1"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_12_80"
+            android:background="@drawable/underline_selector"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <com.dahuochifan.ui.views.CircleImageView
+                android:id="@+id/chef_avatar_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                app:layout_heightPercent="9.5%w"
+                app:layout_widthPercent="9.5%w" />
+
+            <TextView
+                android:id="@+id/chef_nickname_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/chef_avatar_iv"
+                android:textColor="@color/text_second_color_primary"
+                app:layout_textSizePercent="30%" />
+
+            <TextView
+                android:id="@+id/level_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/chef_nickname_tv"
+                android:textColor="@color/text_second_color_primary"
+                android:visibility="gone"
+                app:layout_textSizePercent="30%" />
+
+            <ImageView
+                android:id="@+id/right_iv"
+                android:layout_width="@dimen/width_4_80"
+                android:layout_height="@dimen/width_4_80"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/red_arrow" />
+
+            <TextView
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_0_80"
+                android:layout_toLeftOf="@id/right_iv"
+                android:text=""
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                app:layout_textSizePercent="30%" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <TextView
+            android:id="@+id/price_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_rl"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_16"
+            android:text="人均单价"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/top_rl"
+            android:layout_marginRight="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_16"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/person_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price_others_tv"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="订餐份数"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/person_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/price_tv"
+            android:layout_marginRight="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/actdel_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableware_others_tv"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="优惠减免"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/actdel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tableware_tv"
+            android:layout_marginRight="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/coudel_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actdel_others_tv"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="红包减免"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/coudel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/actdel_tv"
+            android:layout_marginRight="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/distribution_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person_others_tv"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="配送费"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/distribution_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/person_tv"
+            android:layout_marginRight="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/tableware_others_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/distribution_others_tv"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:text="餐具费"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/tableware_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/distribution_tv"
+            android:layout_marginRight="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_12"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_6" />
+
+        <ImageView
+            android:id="@+id/lineOne"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/coudel_others_tv"
+            android:layout_marginTop="@dimen/dh_16"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/mid_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lineOne">
+
+            <TextView
+                android:id="@+id/all_price_tv"
+                style="@style/w_w"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/maincolor_new"
+                android:textSize="@dimen/text_size_14" />
+
+            <RelativeLayout
+                android:id="@+id/discount_rl"
+                android:layout_width="@dimen/width_12_80"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dh_8"
+                android:layout_toLeftOf="@id/all_price_tv"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3px"
+                    android:layout_centerVertical="true"
+                    android:background="@color/black_30" />
+
+                <TextView
+                    android:id="@+id/discount_tv"
+                    style="@style/w_w"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@color/black_65"
+                    android:textSize="@dimen/text_size_4" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/status_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/maincolor_new"
+                android:textSize="@dimen/text_size_6" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

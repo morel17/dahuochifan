@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mainbg">
+
+    <include layout="@layout/top_toolbar" />
+
+    <com.dahuochifan.ui.views.MyScrollview
+        android:layout_below="@id/toolbar"
+        android:id="@+id/mydetail_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/info_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/list_bg"
+                    app:layout_heightPercent="60%w" />
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:canLoop="true"
+                    app:layout_heightPercent="60%w" />
+
+                <TextView
+                    android:id="@+id/top_center_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@color/mainbg"
+                    android:gravity="center"
+                    android:text="暂无图片"
+                    android:textColor="@color/cooklistinfo_textcolor2"
+                    android:textSize="@dimen/text_size_10"
+                    android:visibility="gone" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/select_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_5_80"
+                android:layout_below="@+id/info_rl"
+                android:visibility="gone"
+                android:background="@color/white" >
+
+                <RelativeLayout
+                    android:id="@+id/add_pic_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/center_iv" >
+
+                    <ImageView
+                        android:layout_width="@dimen/width_3_80"
+                        android:layout_height="@dimen/width_3_80"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/cook_business_tv"
+                        android:background="@drawable/dotselector" />
+
+                    <TextView
+                        android:id="@+id/cook_business_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="添加图片"
+                        android:textColor="@color/cooklistinfo_textcolor"
+                        android:textSize="@dimen/text_size_7" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cook_neighbor_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/center_iv" >
+
+                    <ImageView
+                        android:layout_width="@dimen/width_3_80"
+                        android:layout_height="@dimen/width_3_80"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/cook_neighbor_tv"
+                        android:background="@drawable/dotselector" />
+
+                    <TextView
+                        android:id="@+id/cook_neighbor_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/width_3_80"
+                        android:gravity="center"
+                        android:text="新增菜谱 "
+                        android:textColor="@color/cooklistinfo_textcolor"
+                        android:textSize="@dimen/text_size_7" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/center_iv"
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_btn"
+                android:background="@color/mainbg"
+                android:paddingTop="@dimen/width_3_80" >
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/width_5_80"
+                    android:paddingTop="@dimen/width_5_80"
+                    android:text="暂无菜单"
+                    android:textColor="@color/cooklistinfo_textcolor2"
+                    android:textSize="@dimen/text_size_9"
+                    android:visibility="gone" />
+
+                <com.dahuochifan.ui.views.MyWrapListView
+                    android:id="@+id/business_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/card_white"
+                    android:divider="@color/gray"
+                    android:dividerHeight="1px"
+                    android:listSelector="@color/transparent" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.dahuochifan.ui.views.MyScrollview>
+
+</RelativeLayout>

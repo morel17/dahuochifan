@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:segmentcontrol="http://schemas.android.com/apk/res-auto"
+    xmlns:toggle="http://schemas.android.com/tools"
+    android:id="@+id/cardView_caipu_one"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/info_center_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/width_48_80"
+            android:layout_below="@+id/tip_rl">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/list_bg" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/center_viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/width_48_80"
+                android:layout_centerInParent="true" />
+
+            <com.dahuochifan.indicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="10dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_center_rl">
+
+            <TextView
+                android:id="@+id/cbname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="搭伙私房菜"
+                android:layout_marginLeft="@dimen/dh_8"
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                android:textSize="@dimen/text_size_6" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/mytogglebtn"
+                android:layout_width="@dimen/width_12_80"
+                android:layout_height="@dimen/width_6_80"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_1_80"
+                android:layout_marginRight="@dimen/width_1_80"
+                android:layout_toRightOf="@id/cbname_tv"
+                android:layout_marginTop="@dimen/dh_8"
+                android:layout_marginBottom="@dimen/dh_8"
+                toggle:borderWidth="1px" />
+
+            <TextView
+                android:id="@+id/status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/mytogglebtn"
+                android:text="开启"
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                android:textSize="@dimen/text_size_6" />
+
+            <TextView
+                android:id="@+id/appraise_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/width_5_80"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dh_8"
+                android:background="@drawable/card_new_orange"
+                android:gravity="center"
+                android:paddingLeft="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

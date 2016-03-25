@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/unit_main_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dh_48"
+    android:background="@drawable/white_press_selector">
+
+    <TextView
+        android:id="@+id/price_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dh_16"
+        android:text="类型"
+        android:textColor="@color/text_dark"
+        app:layout_textSizePercent="33%" />
+
+    <ImageView
+        android:id="@+id/price_select_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dh_16"
+        android:src="@drawable/unitprice_select"
+        app:layout_heightPercent="33%h"
+        app:layout_widthPercent="33%h" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dh_16"
+        android:layout_toLeftOf="@+id/price_select_iv"
+        android:text="￥ 50"
+        android:textColor="@color/text_dark"
+        app:layout_textSizePercent="33%" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

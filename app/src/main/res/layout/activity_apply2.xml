@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/apply" />
+
+    <RelativeLayout
+        android:id="@+id/toprl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/width_2_80"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="@dimen/width_5_80"
+                android:layout_height="@dimen/width_5_80"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_1_80"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/icon_back"
+                android:padding="@dimen/width_3_80"
+                android:paddingRight="@dimen/width_3_80"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_20_80"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/net_iv"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:clickable="true" />
+
+        <View
+            android:id="@+id/phone_iv"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:clickable="true" />
+    </LinearLayout>
+
+</RelativeLayout>

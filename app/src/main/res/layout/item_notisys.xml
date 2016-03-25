@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_white">
+
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_notitwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top_iv"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/dh_1"
+        app:cardUseCompatPadding="true"
+        app:layout_marginRightPercent="1.748%w"
+        app:layout_widthPercent="85.139%w">
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_press_selector"
+            android:padding="@dimen/dh_16">
+
+            <TextView
+                android:id="@+id/type_tvSys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每日呵呵"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_6" />
+
+
+            <TextView
+                android:id="@+id/content_tvSys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/type_tvSys"
+                android:layout_marginTop="@dimen/dh_8"
+                android:lineSpacingExtra="@dimen/dh_6"
+                android:maxLines="2"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_size_5" />
+
+            <ImageView
+                android:id="@+id/content_ivSys"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/content_tvSys"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dh_8"
+                android:scaleType="fitXY"
+                app:layout_heightPercent="45.975%w" />
+
+            <RelativeLayout
+                android:id="@+id/more_rlSys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/content_ivSys"
+                android:layout_marginTop="@dimen/dh_8"
+                android:ellipsize="end">
+
+                <TextView
+                    android:id="@+id/time_tvSys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="9:30"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/text_size_5" />
+
+                <ImageView
+                    android:id="@+id/more_ivSys"
+                    android:layout_width="@dimen/width_4_80"
+                    android:layout_height="@dimen/width_4_80"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dh_8"
+                    android:background="@mipmap/right_iv" />
+
+                <TextView
+                    android:id="@+id/more_tvSys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dh_8"
+                    android:layout_marginTop="@dimen/dh_8"
+                    android:layout_toLeftOf="@+id/more_ivSys"
+                    android:text="详情"
+                    android:textColor="@color/maincolor_new"
+                    android:textSize="@dimen/text_size_5" />
+
+
+            </RelativeLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dh_16"
+        android:elevation="2dp"
+        app:layout_marginLeftPercent="12%w"
+        app:layout_marginTopPercent="15%w"
+        app:layout_widthPercent="3.328%w">
+
+        <ImageView
+            android:id="@+id/floatbtnSys"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_blue"
+            app:layout_heightPercent="100%w"
+            app:layout_widthPercent="100%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dh_16"
+        android:layout_toLeftOf="@+id/card_notitwo"
+        android:gravity="center"
+        android:text="系统"
+        android:textColor="@color/text_dark"
+        app:layout_marginTopPercent="14.55%w" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dh_3"
+        android:layout_below="@+id/card_notitwo" />
+
+    <View
+        android:id="@+id/top_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dh_3" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

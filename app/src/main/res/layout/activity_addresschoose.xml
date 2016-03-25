@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/tip_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_below="@id/toolbar" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_3_80"
+            android:layout_marginRight="@dimen/width_3_80"
+            android:gravity="center"
+            android:text="请选择配送地址"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cooklistinfo_textcolor" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/manage_address"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dh_48"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mainnewselector"
+        android:gravity="center"
+        android:text="管理收货地址"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_7" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/custom_progress_draw" />
+
+    <ImageView
+        android:id="@+id/back_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/address_back"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/address_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/manage_address"
+        android:layout_below="@+id/tip_rl"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:smoothScrollbar="true"
+        android:divider="@color/transparent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrHeaderBackground="@color/mainbg"
+        ptr:ptrHeaderTextColor="@color/cooklistinfo_textcolor" />
+
+</RelativeLayout>

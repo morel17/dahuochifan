@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/left_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/width_3_80"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/statustv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/width_1_80"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_9" />
+
+        <TextView
+            android:id="@+id/leveltv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statustv"
+            android:gravity="center"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/othertv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="元"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_7" />
+
+    <TextView
+        android:id="@+id/pricetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/othertv"
+        android:gravity="center"
+        android:textColor="@color/maincolor_new" />
+
+    <ImageView
+        android:id="@+id/add_iv"
+        android:layout_width="@dimen/height_3_80"
+        android:layout_height="@dimen/height_3_80"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/width_3_80"
+        android:background="@drawable/cookdetail_add" />
+
+    <TextView
+        android:id="@+id/number_tv"
+        android:layout_width="@dimen/width_12_80"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_0_80"
+        android:layout_marginRight="@dimen/width_0_80"
+        android:layout_toLeftOf="@+id/add_iv"
+        android:background="@drawable/card_main"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_9" />
+
+    <ImageView
+        android:id="@+id/delete_iv"
+        android:layout_width="@dimen/height_3_80"
+        android:layout_height="@dimen/height_3_80"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/number_tv"
+        android:background="@drawable/cookdetail_delete" />
+
+</RelativeLayout>

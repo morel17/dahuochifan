@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_toolbar"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/top_rl"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toprl">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toprl">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_48_80"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/pay_bg"
+                    android:padding="@dimen/width_3_80">
+
+                    <RelativeLayout
+                        android:id="@+id/title_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <ImageView
+                            android:id="@+id/paybag_iv"
+                            android:layout_width="@dimen/width_5_80"
+                            android:layout_height="@dimen/width_5_80"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/pay_top" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/width_0_80"
+                            android:layout_toRightOf="@id/paybag_iv"
+                            android:gravity="center"
+                            android:text="我的收入"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_7" />
+                    </RelativeLayout>
+
+                    <com.bear.risenumbertest.lib.RiseNumberTextView
+                        android:id="@+id/price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/white"
+                        android:textSize="70sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_price"
+                    android:layout_marginTop="2dp">
+
+                    <View
+                        android:id="@+id/cener_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_toLeftOf="@id/cener_iv"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_press_selector">
+
+                            <TextView
+                                android:id="@+id/tixian_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/center_iv_one"
+                                android:background="@color/white"
+                                android:drawableLeft="@mipmap/tixian"
+                                android:drawablePadding="@dimen/dh_8"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/dh_32"
+                                android:paddingTop="@dimen/dh_32"
+                                android:text="提  现"
+                                android:textColor="@color/text_second_color_primary"
+                                android:textSize="@dimen/text_size_9" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_toRightOf="@id/cener_iv"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_press_selector">
+
+                            <TextView
+                                android:id="@+id/zhangdan_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:background="@color/white"
+                                android:drawableLeft="@mipmap/zhangdan"
+                                android:drawablePadding="@dimen/dh_8"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/dh_32"
+                                android:paddingTop="@dimen/dh_32"
+                                android:text="账  单"
+                                android:textColor="@color/text_second_color_primary"
+                                android:textSize="@dimen/text_size_9" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

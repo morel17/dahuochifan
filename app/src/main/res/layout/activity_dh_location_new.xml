@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.DhLocationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/top_toolbar" />
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50_80"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+            <RelativeLayout
+                android:id="@+id/map_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax">
+
+
+                <com.amap.api.maps.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <View
+                    android:id="@+id/center_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/mark_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/center_iv"
+                    android:layout_toRightOf="@+id/center_iv"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/hj_change_address_map_tag"
+                    android:visibility="visible" />
+                <ImageView
+                    android:id="@+id/search_btn"
+                    android:layout_width="@dimen/dh_48"
+                    android:layout_height="@dimen/dh_48"
+                    android:background="@drawable/lightwhite_selector"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/dh_8"
+                    android:padding="@dimen/dh_8"
+                    android:src="@drawable/dh_location_selector"
+                    />
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/cardView_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dh_8"
+                    android:layout_marginRight="@dimen/dh_8"
+                    android:layout_marginTop="@dimen/dh_8"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp">
+
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dh_8">
+
+                        <com.zhy.android.percent.support.PercentRelativeLayout
+                            android:id="@+id/search_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_heightPercent="10%w"
+                            app:layout_widthPercent="10%w">
+
+                            <ImageView
+                                android:id="@+id/search_iv"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/dh_search_map"
+                                app:layout_heightPercent="70%w"
+                                app:layout_widthPercent="70%w" />
+                        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                        <EditText
+                            android:id="@+id/search_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_toRightOf="@+id/search_rl"
+                            android:background="@null"
+                            android:hint="输入地址查找"
+                            android:paddingLeft="@dimen/dh_8"
+                            android:paddingRight="@dimen/dh_8"
+                            android:imeOptions="actionSearch"
+                            android:singleLine="true"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textColorHint="@color/black_second_tittle"
+                            app:layout_heightPercent="10%w"
+                            app:layout_textSizePercent="4.0%" />
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+       <!-- </RelativeLayout>-->
+      <!--      <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:id="@+id/map_bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+        <ProgressBar
+            android:id="@+id/map_bottom_pb"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/map_bottom_tv"
+            android:layout_toRightOf="@+id/map_bottom_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dh_16"
+            android:textColor="@color/cooklistinfo_textcolor_new" />
+    </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:overScrollMode="never" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mainbg" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:app="http://schemas.android.com/apk/res/com.dahuochifan"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white" >
+
+        <ListView
+            android:id="@+id/gonggao_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="@dimen/width_5_80"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transparent"
+            android:padding="@dimen/width_3_80"
+            android:scrollbars="none"
+            android:smoothScrollbar="true" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dh_16"
+        android:src="@drawable/add2"
+        app:borderWidth="0dp"
+        app:theme="@style/Widget.Design.TabLayout.MorelTab" />
+
+</RelativeLayout>

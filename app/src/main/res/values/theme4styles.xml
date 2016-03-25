@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@android:color/holo_red_dark</item>
+    </style>
+
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/top_toolbar" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="5%h">
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColorHint="@color/text_more_light"
+                android:textSize="@dimen/text_size_7"
+                android:theme="@style/AppEditTheme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/ic_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneInput"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="4%h">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/icInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ic_tv">
+
+                <EditText
+                    android:id="@+id/ic_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_more_light"
+                    android:textSize="@dimen/text_size_7"
+                    android:theme="@style/AppEditTheme" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/ic_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignBottom="@+id/icInput"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dh_8"
+                android:background="@drawable/ic_selector"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/white"
+                app:layout_heightPercent="9%h"
+                app:layout_textSizePercent="2.9%"
+                app:layout_widthPercent="30%w" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_rl"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="4%h">
+
+            <EditText
+                android:id="@+id/pass_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColorHint="@color/text_more_light"
+                android:textSize="@dimen/text_size_7"
+                android:theme="@style/AppEditTheme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/pass2Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passInput"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w">
+
+            <EditText
+                android:id="@+id/pass2_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColorHint="@color/text_more_light"
+                android:textSize="@dimen/text_size_7"
+                android:theme="@style/AppEditTheme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inviteInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass2Input"
+            android:visibility="gone"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w">
+
+            <EditText
+                android:id="@+id/invite_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColorHint="@color/text_more_light"
+                android:textSize="@dimen/text_size_7"
+                android:theme="@style/AppEditTheme" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.dahuochifan.ui.views.ripple.RippleView
+            android:id="@+id/register_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inviteInput"
+            android:background="@drawable/card_press_bg_login"
+            android:gravity="center"
+            android:paddingBottom="@dimen/width_2_80"
+            android:paddingTop="@dimen/width_2_80"
+            android:text="@string/register_next_str"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_9"
+            app:layout_marginLeftPercent="11.1%w"
+            app:layout_marginRightPercent="11.1%w"
+            app:layout_marginTopPercent="3%h"
+            ripple:alpha_Factor="0.7"
+            ripple:hover="true"
+            ripple:ripple_Color="@color/white" />
+
+        <TextView
+            android:id="@+id/invite_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/light_white_press_selector"
+            android:padding="@dimen/dh_10"
+            android:text="输入邀请码"
+            app:layout_marginBottomPercent="5.55%h" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</RelativeLayout>

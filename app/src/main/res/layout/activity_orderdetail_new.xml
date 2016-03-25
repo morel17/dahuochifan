@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_rl"
+        android:layout_below="@id/toolbar">
+
+        <ScrollView
+            android:id="@+id/order_detail_sc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_white"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout style="@style/m_w">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp">
+
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.zhy.android.percent.support.PercentRelativeLayout
+                            android:id="@+id/top_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/white_press_selector"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            app:layout_heightPercent="15.30%w"
+                            app:layout_widthPercent="100%w">
+
+                            <com.dahuochifan.ui.views.CircleImageView
+                                android:id="@+id/chef_avatar_iv"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8dp"
+                                app:layout_heightPercent="9.5%w"
+                                app:layout_widthPercent="9.5%w" />
+
+                            <TextView
+                                android:id="@+id/chef_nickname_tv"
+                                style="@style/w_w"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@id/chef_avatar_iv"
+                                android:textColor="@color/text_second_color_primary"
+                                app:layout_textSizePercent="30%" />
+
+                            <TextView
+                                android:id="@+id/level_tv"
+                                style="@style/w_w"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@id/chef_nickname_tv"
+                                android:textColor="@color/text_second_color_primary"
+                                android:visibility="gone"
+                                app:layout_textSizePercent="30%" />
+
+                            <TextView
+                                android:id="@+id/tag_tv"
+                                style="@style/w_w"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@id/level_tv"
+                                android:textColor="@color/maincolor_new"
+                                app:layout_textSizePercent="30%" />
+
+                            <ImageView
+                                android:id="@+id/right_iv"
+                                android:layout_width="@dimen/width_4_80"
+                                android:layout_height="@dimen/width_4_80"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/red_arrow" />
+
+                            <TextView
+                                style="@style/w_w"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/width_0_80"
+                                android:layout_toLeftOf="@id/right_iv"
+                                android:text=""
+                                android:textColor="@color/cooklistinfo_textcolor_new"
+                                app:layout_textSizePercent="30%" />
+                        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/day_number_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/top_rl"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/day_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:textColor="@color/cooklistinfo_textcolor_new"
+                                android:textSize="@dimen/text_size_7" />
+
+                            <TextView
+                                android:id="@+id/mid_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/width_3_80"
+                                android:layout_toRightOf="@id/day_number_tv"
+                                android:gravity="center"
+                                android:text="午"
+                                android:textColor="@color/cooklistinfo_textcolor_new"
+                                android:textSize="@dimen/text_size_7" />
+
+                            <TextView
+                                android:id="@+id/night_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/width_3_80"
+                                android:layout_toRightOf="@id/mid_tv"
+                                android:gravity="center"
+                                android:text="晚"
+                                android:textColor="@color/cooklistinfo_textcolor_new"
+                                android:textSize="@dimen/text_size_7" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/person_2"
+                            style="@style/w_w"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/top_rl"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="人"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/person_tv"
+                            style="@style/w_w"
+                            android:layout_below="@id/top_rl"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/person_2"
+                            android:paddingLeft="@dimen/width_4_80"
+                            android:text="0"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/price_2"
+                            style="@style/w_w"
+                            android:layout_below="@id/top_rl"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/price_tv"
+                            android:text="￥"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/price_tv"
+                            style="@style/w_w"
+                            android:layout_below="@id/top_rl"
+                            android:layout_marginTop="8dp"
+                            android:layout_toLeftOf="@id/person_tv"
+                            android:text="0"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <ImageView
+                            android:id="@+id/lineOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@id/day_number_rl"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/gray" />
+
+                        <RelativeLayout
+                            android:id="@+id/mid_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lineOne">
+
+                            <TextView
+                                android:id="@+id/all_price_tv"
+                                style="@style/w_w"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@color/maincolor_new"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <RelativeLayout
+                                android:id="@+id/discount_rl"
+                                android:layout_width="@dimen/width_12_80"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/width_2_80"
+                                android:layout_toLeftOf="@id/all_price_tv"
+                                android:visibility="gone">
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="3px"
+                                    android:layout_centerVertical="true"
+                                    android:background="@color/black_30" />
+
+                                <TextView
+                                    android:id="@+id/discount_tv"
+                                    style="@style/w_w"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="100"
+                                    android:textColor="@color/black_65"
+                                    android:textSize="@dimen/text_size_4" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/status_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:textColor="@color/maincolor_new"
+                                android:textSize="@dimen/text_size_7" />
+                        </RelativeLayout>
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardView"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:id="@+id/custom_info_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardView"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/contact_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联  系  人："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/contact_tv"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/phone_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/contact_tv"
+                            android:layout_marginTop="@dimen/width_2_80"
+                            android:text="联系电话："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/phone_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/contact_tv"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="@dimen/width_2_80"
+                            android:layout_toRightOf="@+id/phone_tv"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <ImageView
+                            android:id="@+id/cook_call_img"
+                            android:layout_width="@dimen/width_6_80"
+                            android:layout_height="@dimen/width_6_80"
+                            android:layout_alignBottom="@+id/phone_number_tv"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/cook_call"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/address_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/phone_tv"
+                            android:layout_marginTop="@dimen/width_2_80"
+                            android:text="配送地址："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/addressinfo_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/phone_tv"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="@dimen/width_2_80"
+                            android:layout_toLeftOf="@+id/distance_tv"
+                            android:layout_toRightOf="@+id/address_tv"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardView_two"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/time_tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="用餐时间："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/mid_tag_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/time_tv2"
+                            android:gravity="center"
+                            android:text="sbsbsbs"
+                            android:textColor="@color/maincolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/mid_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/mid_tag_tv"
+                            android:gravity="center"
+                            android:textColor="@color/maincolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+
+                        <TextView
+                            android:id="@+id/fangshi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/time_tv2"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="配送方式："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/type_tvme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/time_tv2"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/fangshi"
+                            android:gravity="center"
+                            android:text="配送"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/liuyan_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fangshi"
+                            android:layout_marginTop="8dp"
+                            android:text="备　　注："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/liuyan_et"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_below="@+id/fangshi"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/liuyan_tv"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/order_tv"
+                            style="@style/w_w"
+                            android:layout_below="@+id/liuyan_tv"
+                            android:layout_marginTop="8dp"
+                            android:text="下单日期："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/order_date"
+                            style="@style/w_w"
+                            android:layout_below="@+id/liuyan_tv"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/order_tv"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/order_no"
+                            style="@style/w_w"
+                            android:layout_below="@+id/order_tv"
+                            android:layout_marginTop="8dp"
+                            android:text="订单编号："
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/order_no_tv"
+                            style="@style/w_w"
+                            android:layout_below="@+id/order_tv"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/order_no"
+                            android:textColor="@color/cooklistinfo_textcolor_new"
+                            android:textSize="@dimen/text_size_7" />
+
+                        <TextView
+                            android:id="@+id/orderpay"
+                            style="@style/w_w"
+                            android:layout_below="@+id/order_no"
+                            android:layout_marginTop="8dp"
+                            android:text="自动确认时间:"
+                            android:textColor="@color/maincolor_new"
+                            android:textSize="@dimen/text_size_7"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/orderpay_tv"
+                            style="@style/w_w"
+                            android:layout_below="@+id/order_no"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@id/orderpay"
+                            android:textColor="@color/maincolor_new"
+                            android:textSize="@dimen/text_size_7"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_5_6_80"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.dahuochifan.ui.views.ripple.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="取消订单"
+            android:textColor="@color/text_second_color_primary"
+            android:textSize="@dimen/text_size_7"
+            android:visibility="gone"
+            ripple:alpha_Factor="0.7"
+            ripple:hover="true"
+            ripple:ripple_Color="@color/white" />
+
+        <com.dahuochifan.ui.views.ripple.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bottom_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/maincolor_new"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_7"
+            android:visibility="gone"
+            ripple:alpha_Factor="0.7"
+            ripple:hover="true"
+            ripple:ripple_Color="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/coupon_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dh_56" />
+
+</RelativeLayout>

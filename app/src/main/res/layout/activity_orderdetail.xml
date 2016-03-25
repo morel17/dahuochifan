@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/order_detail_sc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bottom_rl"
+                android:background="@color/light_white"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <RelativeLayout style="@style/m_w">
+
+                    <include layout="@layout/card_ordetail_one" />
+
+                    <include layout="@layout/card_ordetail_two" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView_two"
+                        android:layout_marginTop="@dimen/dh_16" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/bottom_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_5_6_80"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/cancel_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/cancel_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="取消订单"
+                        android:textColor="@color/text_second_color_primary"
+                        android:visibility="visible"
+                        app:layout_textSizePercent="35%" />
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/countView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dh_8"
+                        android:layout_toRightOf="@+id/cancel_tv"
+                        android:visibility="gone"
+                        app:isShowDay="false"
+                        app:isShowHour="false"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:suffixGravity="center"
+                        app:suffixTextColor="@color/maincolor_new"
+                        app:suffixTextSize="11sp"
+                        app:timeTextColor="@color/maincolor_new"
+                        app:timeTextSize="13sp" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <com.dahuochifan.ui.views.ripple.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/bottom_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/maincolor_new"
+                    android:gravity="center"
+                    android:text="评论"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_7"
+                    android:visibility="visible"
+                    app:layout_textSizePercent="35%"
+                    ripple:alpha_Factor="0.7"
+                    ripple:hover="true"
+                    ripple:ripple_Color="@color/white" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <ImageView
+                android:id="@+id/coupon_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dh_56" />
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/preview_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_ll"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/detail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/text_dark"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/back_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_above="@+id/detail_tv"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    app:layout_heightPercent="33.39%w"
+                    app:layout_marginBottomPercent="5.63%h"
+                    app:layout_widthPercent="33.39%w" />
+
+                <TextView
+                    android:id="@+id/refresh_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_tv"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/card_press_bg_login"
+                    android:gravity="center"
+                    android:text="重新加载"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:layout_heightPercent="10.795%w"
+                    app:layout_marginTopPercent="4.10%h"
+                    app:layout_widthPercent="42.83%w" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

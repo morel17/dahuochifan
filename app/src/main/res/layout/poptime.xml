@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/width_62_80"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+        <RelativeLayout
+            android:id="@+id/pop_time_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_white">
+
+            <ImageView
+                android:id="@+id/bar_red"
+                android:layout_width="@dimen/width_2_80"
+                android:layout_height="@dimen/width_18_80"
+                android:background="@color/maincolor_new" />
+
+            <TextView
+                android:id="@+id/midother"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/bar_red"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="午餐"
+                android:textColor="@color/maincolor_new" />
+
+            <ImageView
+                android:id="@+id/v_one"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/midother"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/midone"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/v_one"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="11:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:id="@+id/v_two"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/midone"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/midtwo"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/v_two"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="11:30"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:id="@+id/v_three"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/midtwo"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/midthree"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/v_three"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="12:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:id="@+id/v_four"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/midthree"
+                android:background="@color/gray" />
+
+            <ImageView
+                android:id="@+id/h_one"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/midother"
+                android:layout_toRightOf="@+id/bar_red"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/midfour"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one"
+                android:layout_toRightOf="@+id/bar_red"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="12:30"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <TextView
+                android:id="@+id/midfive"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one"
+                android:layout_toRightOf="@+id/v_one"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="13:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <TextView
+                android:id="@+id/midsix"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one"
+                android:layout_toRightOf="@+id/v_two"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="13:30"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <TextView
+                android:id="@+id/midseven"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one"
+                android:layout_toRightOf="@+id/v_three"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="14:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/bar_red"
+                android:background="@color/gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_time_rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pop_time_rl"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:background="@color/light_white">
+
+            <ImageView
+                android:id="@+id/bar_red2"
+                android:layout_width="@dimen/width_2_80"
+                android:layout_height="@dimen/width_18_80"
+                android:background="@color/maincolor_new" />
+
+            <TextView
+                android:id="@+id/nigother"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/bar_red2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="晚餐"
+                android:textColor="@color/maincolor_new" />
+
+            <ImageView
+                android:id="@+id/v_one2"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/nigother"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/nigone"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/v_one2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="17:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:id="@+id/v_two2"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/nigone"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/nigtwo"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/v_two2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="17:30"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:id="@+id/v_three2"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/nigtwo"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/nigthree"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_toRightOf="@+id/v_three2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="18:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:id="@+id/v_four2"
+                android:layout_width="1px"
+                android:layout_height="@dimen/width_18_80"
+                android:layout_toRightOf="@+id/nigthree"
+                android:background="@color/gray" />
+
+            <ImageView
+                android:id="@+id/h_one2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/nigother"
+
+                android:layout_toRightOf="@+id/bar_red2"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/nigfour"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one2"
+                android:layout_toRightOf="@+id/bar_red2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="18:30"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <TextView
+                android:id="@+id/nigfive"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one2"
+                android:layout_toRightOf="@+id/v_one2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="19:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <TextView
+                android:id="@+id/nigsix"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one2"
+                android:layout_toRightOf="@+id/v_two2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="19:30"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <TextView
+                android:id="@+id/nigseven"
+                android:layout_width="@dimen/width_15_80"
+                android:layout_height="@dimen/width_9_80"
+                android:layout_below="@+id/h_one2"
+                android:layout_toRightOf="@+id/v_three2"
+                android:background="@drawable/pop_item_color_selsector"
+                android:gravity="center"
+                android:text="20:00"
+                android:textColor="@color/pop_item_tv_color_selsector" />
+
+            <ImageView
+                android:layout_width="@dimen/width_2_80"
+                android:layout_height="2px"
+                android:layout_below="@+id/bar_red2"
+                android:background="@color/maincolor_new" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/bar_red2"
+                android:background="@color/gray" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

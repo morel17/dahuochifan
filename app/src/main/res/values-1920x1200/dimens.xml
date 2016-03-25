@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	
+	<dimen name="text_size_0">9sp</dimen>
+	<dimen name="text_size_1">10sp</dimen>
+	<dimen name="text_size_2">11sp</dimen>
+	<dimen name="text_size_3">12sp</dimen>
+
+	<dimen name="text_size_4">13sp</dimen>
+	<dimen name="text_size_5">14sp</dimen>
+	<dimen name="text_size_6">15sp</dimen>
+	<dimen name="text_size_7">16sp</dimen>
+	
+	<dimen name="text_size_8">17sp</dimen>
+	<dimen name="text_size_9">18sp</dimen>
+	<dimen name="text_size_10">19sp</dimen>
+	<dimen name="text_size_11">20sp</dimen>
+	
+	<dimen name="text_size_12">21sp</dimen>
+	<dimen name="text_size_13">22sp</dimen>
+	<dimen name="text_size_14">23sp</dimen>
+	<dimen name="text_size_15">24sp</dimen>
+	
+	<dimen name="text_size_16">25sp</dimen>
+	<dimen name="text_size_17">26sp</dimen>
+	<dimen name="text_size_18">27sp</dimen>
+	<dimen name="text_size_19">28sp</dimen>
+	<dimen name="text_size_20">29sp</dimen>
+	<dimen name="text_size_21">30sp</dimen>
+	<dimen name="text_size_22">31sp</dimen>
+	<dimen name="text_size_23">32sp</dimen>
+	<dimen name="text_size_24">33sp</dimen>
+	<dimen name="text_size_25">34sp</dimen>
+	<dimen name="text_size_26">35sp</dimen>
+	<dimen name="text_size_27">36sp</dimen>
+	<dimen name="text_size_28">37sp</dimen>
+</resources>

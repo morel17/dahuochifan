@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/width_3_80"
+        android:text="添加公告"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_9" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/title_tv"
+        android:background="@color/gray_l" />
+
+    <RelativeLayout
+        android:id="@+id/cb_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginRight="@dimen/width_3_80"
+        android:background="@drawable/underline_gray_bottom"
+        android:padding="@dimen/width_3_80">
+
+        <com.zcw.togglebutton.ToggleButton xmlns:toggle="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mytogglebtn"
+            android:layout_width="@dimen/width_12_80"
+            android:layout_height="@dimen/width_6_80"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/width_1_80"
+            android:layout_marginRight="@dimen/width_1_80"
+            android:layout_toRightOf="@id/left_tv"
+            app:off_Color="@android:color/holo_blue_light"
+            app:on_Color="#ff99cc"
+            toggle:borderWidth="1px" />
+
+        <TextView
+            android:id="@+id/man_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_2_80"
+            android:layout_toLeftOf="@id/mytogglebtn"
+            android:text="男"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/weman_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_2_80"
+            android:layout_toRightOf="@id/mytogglebtn"
+            android:text="女"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_5" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonll"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@+id/cb_rl"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/cancel_btn_select"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_9" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:background="@color/gray_l" />
+
+        <TextView
+            android:id="@+id/ok_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/confirm_btn_select"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_9" />
+    </LinearLayout>
+
+</RelativeLayout>

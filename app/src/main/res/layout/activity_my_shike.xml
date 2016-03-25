@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:orientation="vertical" >
+
+    <include 
+        layout="@layout/top_rl"
+        />
+    <TextView
+        android:id="@+id/cooklist_refresh_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/toprl"
+        android:background="@drawable/card_press_bg_startregister"
+        android:padding="@dimen/width_3_80"
+        android:text="重新加载"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/shikelistview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/width_2_80"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:layout_below="@id/toprl"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" 
+        />
+
+</RelativeLayout>

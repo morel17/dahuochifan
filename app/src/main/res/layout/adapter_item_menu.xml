@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_content_rl"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginLeft="@dimen/dh_8"
+    android:layout_marginRight="@dimen/dh_8"
+    android:layout_marginTop="@dimen/dh_8"
+    android:background="@drawable/white_press_selector"
+    android:paddingLeft="@dimen/dh_16"
+    android:paddingRight="@dimen/dh_16">
+
+    <TextView
+        android:id="@+id/menu_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/dh_pinfo"
+        android:textColor="@color/cooklistinfo_textcolor_new"
+        app:layout_textSizePercent="30%" />
+
+    <ImageView
+        android:id="@+id/menu_content_iv"
+        android:layout_width="@dimen/dh_24"
+        android:layout_height="@dimen/dh_24"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/ic_launcher" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

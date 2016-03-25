@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toggle="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/top_toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewCBTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/width_1_80"
+        android:layout_marginRight="@dimen/width_1_80"
+        android:layout_marginTop="@dimen/width_1_80"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/dh_2"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/info_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/list_bg"
+                    app:layout_heightPercent="60%w" />
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:canLoop="true"
+                    app:layout_heightPercent="60%w" />
+
+                <TextView
+                    android:id="@+id/top_center_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@color/mainbg"
+                    android:gravity="center"
+                    android:text="暂无图片"
+                    android:textColor="@color/cooklistinfo_textcolor2"
+                    android:textSize="@dimen/text_size_10"
+                    android:visibility="gone" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/shop_edit_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_rl">
+
+                <TextView
+                    android:id="@+id/cookbook_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="大火私房菜"
+                    android:textColor="@color/text_dark"
+                    app:layout_marginLeftPercent="4.62%w"
+                    app:layout_textSizePercent="3.5%" />
+
+                <TextView
+                    android:id="@+id/com_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/cookbook_name"
+                    android:background="@drawable/card_new_orange"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/width_2_80"
+                    android:paddingRight="@dimen/width_2_80"
+                    android:text="1234评论"
+                    android:textColor="@color/white"
+                    app:layout_heightPercent="5.37%w"
+                    app:layout_marginLeftPercent="3.12%w"
+                    app:layout_textSizePercent="3%" />
+
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/mytogglebtn"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:layout_heightPercent="5.37%w"
+                    app:layout_marginBottomPercent="5.55%w"
+                    app:layout_marginRightPercent="4.62%w"
+                    app:layout_marginTopPercent="5.55%w"
+                    app:layout_widthPercent="12.03%w"
+                    toggle:borderWidth="1px" />
+
+                <TextView
+                    android:id="@+id/status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/mytogglebtn"
+                    android:text="已关店"
+                    android:textColor="@color/text_dark"
+                    app:layout_marginRightPercent="3.12%w"
+                    app:layout_textSizePercent="3%" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardViewCBTop"
+        android:layout_marginLeft="@dimen/width_1_80"
+        android:layout_marginTop="@dimen/width_1_80"
+        android:minHeight="@dimen/width_1_80">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/width_5_80"
+            android:paddingTop="@dimen/width_5_80"
+            android:text="暂无菜单"
+            android:textColor="@color/cooklistinfo_textcolor2"
+            android:textSize="@dimen/text_size_9"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cookbook_cyc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>

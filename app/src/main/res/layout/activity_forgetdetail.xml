@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <TextView
+        android:id="@+id/register_second_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/width_4_80"
+        android:background="@drawable/card_press_bg_white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/width_3_80"
+        android:textColor="@color/edtihint_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/width_4_80"
+        android:layout_marginLeft="@dimen/width_4_80"
+        android:layout_marginRight="@dimen/width_4_80"
+        android:background="@drawable/card_press_bg_white"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/pass_first_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/register_password_first"
+            android:inputType="textPassword"
+            android:padding="@dimen/width_3_80"
+            android:textColorHint="@color/edtihint_color"
+            android:textSize="@dimen/text_size_9" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/width_2_80"
+            android:layout_marginRight="@dimen/width_2_80"
+            android:background="@color/line_color" />
+
+        <EditText
+            android:id="@+id/pass_second_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/register_password_second"
+            android:inputType="textPassword"
+            android:padding="@dimen/width_3_80"
+            android:textColorHint="@color/edtihint_color"
+            android:textSize="@dimen/text_size_9" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register_complete_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/width_4_80"
+        android:background="@drawable/card_press_bg_login"
+        android:gravity="center"
+        android:paddingBottom="@dimen/width_3_80"
+        android:paddingTop="@dimen/width_3_80"
+        android:text="完    成"
+        android:textColor="@color/white" />
+
+</LinearLayout>

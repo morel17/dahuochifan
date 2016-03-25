@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_rl" />
+
+    <com.dahuochifan.ui.view.indicator.ScrollIndicatorView
+        android:id="@+id/metab_indicator"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toprl"
+        android:layout_height="@dimen/height_5_6_80" />
+
+    <com.dahuochifan.ui.views.MyViewPager
+        android:id="@+id/metab_viewPager"
+        android:layout_below="@id/metab_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

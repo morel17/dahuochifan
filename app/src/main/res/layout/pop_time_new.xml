@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_rl"
+    android:layout_width="@dimen/width_64_80"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/lunch_time_rl"
+        android:layout_width="@dimen/width_64_80"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/lunch_left_iv"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/maincolor_new"
+            app:layout_widthPercent="2.5%w" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="@dimen/width_64_80"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lunch_left_iv">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lunch_cyc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@+id/lunch_left_iv"
+                android:overScrollMode="never" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/dinner_time_rl"
+        android:layout_width="@dimen/width_64_80"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lunch_time_rl"
+        android:layout_marginTop="@dimen/dh_8">
+
+        <ImageView
+            android:id="@+id/dinner_left_iv"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/maincolor_new"
+            app:layout_widthPercent="2.5%w" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/dinner_rl"
+            android:layout_width="@dimen/width_64_80"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dinner_left_iv">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dinner_cyc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:overScrollMode="never" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</RelativeLayout>

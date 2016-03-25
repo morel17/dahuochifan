@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/head_rl"
+    android:layout_width="@dimen/width_9_80"
+    android:layout_height="@dimen/width_11_80">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/width_5_80"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/ditu"
+        />
+    <RelativeLayout
+        android:id="@+id/center_rl"
+        android:layout_width="@dimen/width_9_80"
+        android:layout_height="@dimen/width_9_80"
+        android:layout_centerHorizontal="true"
+        >
+        <ImageView
+            android:id="@+id/head_cir_img"
+            android:layout_width="@dimen/width_9_80"
+            android:layout_height="@dimen/width_9_80"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_order_big"
+            />
+        <com.dahuochifan.ui.views.CircleImageView
+            android:id="@+id/head_cir"
+            android:layout_width="@dimen/width_8_80"
+            android:layout_height="@dimen/width_8_80"
+            android:src="@drawable/customerhead"
+            android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+
+    <View
+        android:id="@+id/iv"
+        android:layout_width="@dimen/width_3_80"
+        android:layout_height="@dimen/width_3_80"
+        android:layout_below="@+id/center_rl"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/edit_ll"
+        style="@style/m_w"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="@dimen/width_3_80"
+        android:background="@drawable/card_press_bg_white"
+        android:orientation="vertical"
+        android:padding="@dimen/width_1_80" >
+
+        <EditText
+            android:id="@+id/register_phone_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/register_phone_hint"
+            android:inputType="number"
+            android:padding="@dimen/width_3_80"
+            android:textColorHint="@color/gray_l"
+            android:textSize="@dimen/text_size_8" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/width_1_80"
+            android:layout_marginRight="@dimen/width_1_80"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/indentify_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/width_1_80"
+                android:layout_weight="1"
+                android:background="@drawable/underline_gray_bottom"
+                android:hint="验证码"
+                android:inputType="number"
+                android:padding="@dimen/width_2_80"
+                android:textColor="@color/cooklistinfo_textcolor"
+                android:textColorHint="@color/gray_l"
+                android:textSize="@dimen/text_size_8" />
+
+            <com.dahuochifan.ui.views.ripple.RippleView
+                android:id="@+id/indentify_tv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/width_1_80"
+                android:layout_weight="1"
+                android:background="@drawable/card_press_bg_startregister"
+                android:gravity="center"
+                android:text="@string/get_indentifyingcode"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_8"
+                ripple:alpha_Factor="0.7"
+                ripple:hover="true"
+                ripple:ripple_Color="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.dahuochifan.ui.views.ripple.RippleView
+        android:id="@+id/register_next_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_ll"
+        android:layout_marginLeft="@dimen/width_3_80"
+        android:layout_marginRight="@dimen/width_3_80"
+        android:background="@drawable/card_press_bg_login"
+        android:gravity="center"
+        android:paddingBottom="@dimen/width_2_80"
+        android:paddingTop="@dimen/width_2_80"
+        android:text="确    认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_9"
+        ripple:alpha_Factor="0.7"
+        ripple:hover="true"
+        ripple:ripple_Color="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/width_2_80"
+        android:text="请谨慎更换您的联系方式"
+        android:textColor="@color/cooklistinfo_textcolor"
+        android:textSize="@dimen/text_size_5" />
+
+</RelativeLayout>

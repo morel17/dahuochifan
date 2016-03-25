@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/bottom_rl"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="false">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_white"
+        android:fitsSystemWindows="false">
+
+        <!--<include-->
+        <!--android:id="@+id/toolbar"-->
+        <!--layout="@layout/top_toolbar" />-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_48_80"
+            android:fitsSystemWindows="false"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="false"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="0dp"
+                app:expandedTitleMarginStart="16dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/list_bg"
+                    android:fitsSystemWindows="false"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipe"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/bottom_rl"-->
+        <!--android:layout_below="@+id/appbar"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <!--android:background="@color/light_white">-->
+
+        <com.dahuochifan.ui.views.myviews.MyScrollview
+            android:id="@+id/nestedsctollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dh_48"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/cardview_cookdetail_one" />
+
+                <include layout="@layout/cardview_cookdetail_cook" />
+
+                <include layout="@layout/cardview_shikedetail_story" />
+
+                <include layout="@layout/cardview_cookdetail_two" />
+
+                <include layout="@layout/cardview_cookdetail_comments" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dh_8"
+                    android:layout_below="@+id/cardView2" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dh_32"
+                    android:layout_below="@+id/cardView_comments" />
+            </RelativeLayout>
+        </com.dahuochifan.ui.views.myviews.MyScrollview>
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/head_float"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@color/transparent"
+            android:visibility="gone"
+            app:backgroundTint="@color/transparent"
+            app:borderWidth="0dp"
+            app:layout_anchor="@id/appbar"
+            app:layout_anchorGravity="bottom|center"
+            app:rippleColor="@color/transparent" />
+
+        <RelativeLayout
+            android:id="@+id/chef_head_rl"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:background="@drawable/fab"
+            app:layout_anchor="@id/appbar"
+            app:layout_anchorGravity="bottom|center">
+
+            <com.dahuochifan.ui.views.CircleImageView
+                android:id="@+id/chef_head"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:src="@drawable/cookhead" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/width_5_80"
+            android:paddingTop="@dimen/width_5_80"
+            android:text="暂无菜单"
+            android:textColor="@color/cooklistinfo_textcolor2"
+            android:textSize="@dimen/text_size_9"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dh_48"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/center_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true" />
+
+            <com.dahuochifan.ui.views.ripple.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/tomorrow_order_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_toRightOf="@id/center_iv"
+                android:background="@color/maincolor_new"
+                android:gravity="center"
+                android:text="明日订单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_9"
+                ripple:alpha_Factor="0.7"
+                ripple:hover="true"
+                ripple:ripple_Color="@color/white" />
+
+            <com.dahuochifan.ui.views.ripple.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/today_order_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_toLeftOf="@id/center_iv"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="今日订单"
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                android:textSize="@dimen/text_size_9"
+                ripple:alpha_Factor="0.7"
+                ripple:hover="true"
+                ripple:ripple_Color="@color/white" />
+
+            <TextView
+                android:id="@+id/tip_tv"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/underline_gray_top"
+                android:gravity="center"
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                android:textSize="@dimen/text_size_9" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/acor_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/width_18_80"
+            android:layout_marginTop="@dimen/width_25_80" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/preview_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_ll"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/detail_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_dark"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/back_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_above="@+id/detail_tvs"
+                android:layout_centerHorizontal="true"
+                android:scaleType="center"
+                android:visibility="gone"
+                app:layout_heightPercent="33.39%w"
+                app:layout_marginBottomPercent="5.63%h"
+                app:layout_widthPercent="33.39%w" />
+
+            <TextView
+                android:id="@+id/refresh_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_tvs"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/card_press_bg_login"
+                android:gravity="center"
+                android:text="重新加载"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_heightPercent="10.795%w"
+                app:layout_marginTopPercent="4.10%h"
+                app:layout_widthPercent="42.83%w" />
+
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

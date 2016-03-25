@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:paddingLeft="@dimen/width_1_80"
+    android:paddingRight="@dimen/width_1_80">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/price_rl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_press_selector"
+        app:layout_heightPercent="27.271%w"
+        app:layout_widthPercent="34.0677%w">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            app:layout_widthPercent="2%w" />
+
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="4"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            app:layout_textSizePercent="58%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price_tv"
+            android:layout_marginLeft="@dimen/dh_4"
+            android:layout_toRightOf="@+id/price_tv"
+            android:text="￥"
+            android:textColor="@color/gray"
+            app:layout_marginBottomPercent="9%w"
+            app:layout_textSizePercent="17%" />
+
+
+        <TextView
+            android:id="@+id/remain_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price_tv"
+            android:layout_centerHorizontal="true"
+            android:text="还有3天有效"
+            android:textColor="@color/gray"
+            app:layout_textSizePercent="10%" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <ImageView
+        android:id="@+id/middle_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@+id/price_rl"
+        android:background="@drawable/sssb"
+        app:layout_heightPercent="26.271%w"
+        app:layout_widthPercent="1.8%w" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@+id/middle_iv"
+        android:background="@drawable/white_press_selector"
+        app:layout_heightPercent="27.271%w">
+
+        <TextView
+            android:id="@+id/type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            app:layout_marginLeftPercent="8.587%w"
+            app:layout_marginTopPercent="6.094%w"
+            app:layout_textSizePercent="17%" />
+
+        <TextView
+            android:id="@+id/type_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/type_tv"
+            android:textColor="@color/gray"
+            app:layout_marginLeftPercent="2.21%w"
+            app:layout_marginTopPercent="8.587%w"
+            app:layout_textSizePercent="11%" />
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/type_tv"
+            android:textColor="@color/gray"
+            app:layout_marginLeftPercent="8.587%w"
+            app:layout_marginTopPercent="5.094%w"
+            app:layout_textSizePercent="11%" />
+
+        <TextView
+            android:id="@+id/remain_detail_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_tv"
+            android:textColor="@color/gray"
+            app:layout_marginLeftPercent="8.587%w"
+            app:layout_marginTopPercent="5.094%w"
+            app:layout_textSizePercent="11%" />
+
+        <ImageView
+            android:id="@+id/discount_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/discount_unable"
+            app:layout_heightPercent="21.606%w"
+            app:layout_widthPercent="21.606%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

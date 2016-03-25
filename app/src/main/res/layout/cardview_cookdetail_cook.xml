@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_cook"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/cardView"
+    android:layout_marginBottom="@dimen/dh_2"
+    android:layout_marginLeft="@dimen/width_1_80"
+    android:layout_marginRight="@dimen/width_1_80"
+    android:layout_marginTop="@dimen/dh_6"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="@dimen/dh_1"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/today_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dh_16"
+            android:layout_marginTop="@dimen/dh_16"
+            android:background="@color/maincolor_new"
+            android:paddingBottom="@dimen/dh_2"
+            android:paddingLeft="@dimen/dh_4"
+            android:paddingRight="@dimen/dh_4"
+            android:paddingTop="@dimen/dh_2"
+            android:text="今"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/today_relay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dh_16"
+            android:layout_toRightOf="@+id/today_others"
+            android:background="@drawable/card_bord_main_new2"
+            android:paddingBottom="@dimen/dh_2"
+            android:paddingLeft="@dimen/dh_7"
+            android:paddingRight="@dimen/dh_7"
+            android:paddingTop="@dimen/dh_2"
+            android:text="30份"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/tomorrow_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_marginTop="@dimen/dh_16"
+            android:layout_toRightOf="@+id/today_relay_tv"
+            android:background="@color/maincolor_new"
+            android:paddingBottom="@dimen/dh_2"
+            android:paddingLeft="@dimen/dh_4"
+            android:paddingRight="@dimen/dh_4"
+            android:paddingTop="@dimen/dh_2"
+            android:text="明"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/tomorrow_relay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dh_16"
+            android:layout_toRightOf="@+id/tomorrow_others"
+            android:background="@drawable/card_bord_main_new2"
+            android:paddingBottom="@dimen/dh_2"
+            android:paddingLeft="@dimen/dh_7"
+            android:paddingRight="@dimen/dh_7"
+            android:paddingTop="@dimen/dh_2"
+            android:text="30份"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_5" />
+
+        <RelativeLayout
+            android:id="@+id/caixi_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_others"
+            android:layout_marginTop="@dimen/dh_8"
+            android:paddingLeft="@dimen/dh_16"
+            android:paddingRight="@dimen/dh_16">
+
+            <TextView
+                android:id="@+id/dh_tags_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="口　味："
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_6" />
+
+            <TextView
+                android:id="@+id/dh_tags_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dh_tags_other"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_size_6" />
+
+            <TextView
+                android:id="@+id/good_dish_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dh_tags_tv"
+                android:layout_marginTop="@dimen/dh_8"
+                android:text="拿手菜："
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_6" />
+
+            <TextView
+                android:id="@+id/good_dish_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dh_tags_tv"
+                android:layout_marginRight="@dimen/dh_8"
+                android:layout_marginTop="@dimen/dh_8"
+                android:layout_toRightOf="@+id/good_dish_other"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_size_6" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_iv"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/caixi_rl"
+            android:layout_marginTop="@dimen/dh_8"
+            android:background="@color/gray" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/trans_distance_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_iv"
+            android:layout_marginLeft="@dimen/dh_16"
+            android:layout_marginRight="@dimen/dh_16"
+            android:layout_marginTop="@dimen/dh_16">
+
+            <ImageView
+                android:id="@+id/trans_distance_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/motodistance_icon"
+                app:layout_heightPercent="5%w"
+                app:layout_widthPercent="5%w" />
+
+            <TextView
+                android:id="@+id/type_distance_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dh_8"
+                android:layout_toRightOf="@id/trans_distance_icon"
+                android:text="点餐范围："
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:id="@+id/type_distance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dh_8"
+                android:layout_toRightOf="@id/type_distance_one"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_4" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/trans_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trans_distance_rl"
+            android:layout_marginLeft="@dimen/dh_16"
+            android:layout_marginTop="@dimen/dh_4">
+
+            <ImageView
+                android:id="@+id/trans_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/motocycler"
+                app:layout_heightPercent="5%w"
+                app:layout_widthPercent="5%w" />
+
+            <TextView
+                android:id="@+id/type_tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/trans_icon"
+                android:text="配　送"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/type_tv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/type_tv_one"
+                android:text="自　提"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/type_tv_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/type_tv_two"
+                android:text="堂　吃"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/trans_discount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dh_8"
+                android:layout_toRightOf="@+id/type_tv_three"
+                android:textColor="@color/maincolor_new"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:id="@+id/trans_fee_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dh_8"
+                android:layout_toRightOf="@+id/trans_icon"
+                android:text="配  送  费："
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:id="@+id/trans_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dh_8"
+                android:layout_toRightOf="@+id/trans_fee_other"
+                android:textColor="@color/maincolor_new"
+                android:textSize="@dimen/text_size_4" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/actiivty_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trans_rl">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_cyc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dh_16"
+            android:layout_below="@+id/actiivty_rl" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

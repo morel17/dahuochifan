@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_15_80"
+        android:background="@drawable/white_press_selector"
+        android:paddingLeft="@dimen/width_3_80"
+        android:paddingRight="@dimen/width_3_80" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/underline_selector" />
+
+        <com.dahuochifan.ui.views.CircleImageView
+            android:id="@+id/chef_avatar_iv"
+            android:layout_width="@dimen/width_9_80"
+            android:layout_height="@dimen/width_9_80"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/chef_nickname_tv"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_1_80"
+            android:layout_toRightOf="@+id/chef_avatar_iv"
+            android:text="张姐美味"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/status_tv"
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_1_80"
+            android:layout_toRightOf="@+id/chef_nickname_tv"
+            android:paddingBottom="@dimen/width_0_80"
+            android:paddingLeft="@dimen/width_1_80"
+            android:paddingRight="@dimen/width_1_80"
+            android:paddingTop="@dimen/width_0_80"
+            android:text="未完成订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_3" />
+
+        <ImageView
+            android:id="@+id/right_iv"
+            android:layout_width="@dimen/width_4_80"
+            android:layout_height="@dimen/width_4_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/red_arrow" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_0_80"
+            android:layout_toLeftOf="@id/right_iv"
+            android:text="详情"
+            android:textColor="@color/cooklistinfo_textcolor_new"
+            android:textSize="@dimen/text_size_5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mid_rl"
+        style="@style/m_w"
+        android:layout_below="@id/top_rl"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/width_3_80" >
+
+        <TextView
+            android:id="@+id/tag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/width_1_80"
+            android:paddingRight="@dimen/width_1_80"
+            android:textColor="@color/mainorange"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/level_tv"
+            style="@style/w_w"
+            android:layout_marginLeft="@dimen/width_2_80"
+            android:layout_toRightOf="@id/tag_tv"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_6" />
+
+        <TextView
+            android:id="@+id/all_price_tv"
+            style="@style/w_w"
+            android:layout_alignParentRight="true"
+            android:text="总计80￥"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_5" />
+
+        <TextView
+            android:id="@+id/person_2"
+            style="@style/w_w"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/width_30_80"
+            android:text="人"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            android:id="@+id/person_tv"
+            style="@style/w_w"
+            android:layout_toLeftOf="@id/person_2"
+            android:paddingLeft="@dimen/width_3_80"
+            android:text="0"
+            android:textColor="@color/maincolor_new"
+            android:textSize="@dimen/text_size_7" />
+
+        <RelativeLayout
+            android:id="@+id/day_number_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_5_80"
+            android:layout_below="@id/tag_tv"
+            android:layout_marginTop="@dimen/width_2_80"
+            android:background="@drawable/card_gray"
+            android:paddingLeft="@dimen/width_2_80"
+            android:paddingRight="@dimen/width_2_80" >
+
+            <TextView
+                android:id="@+id/day_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:id="@+id/mid_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_toRightOf="@id/day_number_tv"
+                android:gravity="center"
+                android:text="午"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:id="@+id/night_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_3_80"
+                android:layout_toRightOf="@id/mid_tv"
+                android:gravity="center"
+                android:text="晚"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/comment_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_5_80"
+            android:layout_alignBottom="@id/day_number_rl"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/card_orange"
+            android:gravity="center"
+            android:paddingLeft="@dimen/width_3_80"
+            android:paddingRight="@dimen/width_3_80"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+</RelativeLayout>

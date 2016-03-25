@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/top_toolbar" />
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="@dimen/dh_8"
+        android:layout_marginRight="@dimen/dh_8"
+        android:layout_marginTop="@dimen/dh_8"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/dh_1">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dh_48">
+            <ImageView
+                android:id="@+id/delete_tv"
+                android:layout_width="@dimen/dh_48"
+                android:layout_height="@dimen/dh_48"
+                android:src="@drawable/delete"
+                android:scaleType="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                />
+            <AutoCompleteTextView
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@null"
+                android:completionThreshold="1"
+                android:hint="输入地址查找"
+                android:paddingLeft="@dimen/dh_48"
+                android:paddingRight="@dimen/dh_8"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/delete_tv"
+                android:textColor="@color/cooklistinfo_textcolor_new"
+                android:textColorHint="@color/black_second_tittle"
+                app:layout_textSizePercent="26.5%" />
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/search_rl"
+                android:layout_width="@dimen/dh_48"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/dh_search_map"
+                    app:layout_heightPercent="58%w"
+                    app:layout_widthPercent="58%w" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/custom_progress_draw" />
+
+    <ImageView
+        android:id="@+id/back_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/address_back"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/add_address_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dh_48"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mainnewselector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/litte_view"
+            android:layout_width="@dimen/width_4_80"
+            android:layout_height="@dimen/width_4_80"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/little_location" />
+
+        <TextView
+            android:id="@+id/add_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dh_8"
+            android:layout_toRightOf="@+id/litte_view"
+            android:text="我的当前位置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_address_rl"
+        android:layout_below="@+id/cardView_search"
+        android:layout_marginBottom="@dimen/dh_8"
+        android:layout_marginLeft="@dimen/dh_8"
+        android:layout_marginRight="@dimen/dh_8"
+        android:layout_marginTop="@dimen/dh_4"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/dh_1">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrDrawable="@drawable/default_ptr_flip"
+            ptr:ptrHeaderBackground="@color/light_white"
+            ptr:ptrHeaderTextColor="@color/cooklistinfo_textcolor" />
+
+        <ListView
+            android:id="@+id/recycler_locaiton"
+            android:background="@color/white"
+            android:listSelector="@drawable/underline_selector"
+            android:divider="@color/gray_t"
+            android:dividerHeight="1px"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

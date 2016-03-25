@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mainbg" >
+
+    <include layout="@layout/top_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/tag_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/width_2_80"
+        android:background="@drawable/underline_top_bottom_selector"
+        android:paddingLeft="@dimen/width_6_80"
+        android:paddingRight="@dimen/width_6_80" >
+
+        <TextView
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:text="菜系"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tag_one_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_0_80"
+                android:background="@color/tag_bg11"
+                android:padding="@dimen/width_0_80"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tag_two_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/width_0_80"
+                android:layout_toRightOf="@id/tag_one_tv"
+                android:background="@color/tag_bg2"
+                android:padding="@dimen/width_0_80"
+                android:text=" 2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tag_three_tv"
+                style="@style/w_w"
+                android:layout_toRightOf="@+id/tag_two_tv"
+                android:background="@color/tag_bg3"
+                android:padding="@dimen/width_0_80"
+                android:text="3 "
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tag_four_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_0_80"
+                android:layout_toRightOf="@id/tag_three_tv"
+                android:background="@color/tag_bg4"
+                android:padding="@dimen/width_0_80"
+                android:text=" 4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tag_five_tv"
+                style="@style/w_w"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/width_0_80"
+                android:layout_toRightOf="@id/tag_four_tv"
+                android:background="@color/tag_bg5"
+                android:padding="@dimen/width_0_80"
+                android:text="5 "
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_4"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/right_iv"
+            android:layout_width="@dimen/width_4_80"
+            android:layout_height="@dimen/width_4_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/width_2_80"
+            android:background="@drawable/red_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/start_price_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@id/tag_rl"
+        android:layout_marginTop="@dimen/width_2_80"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_6_80"
+        android:paddingRight="@dimen/width_6_80" >
+
+        <EditText
+            android:id="@+id/start_price_et"
+            style="@style/cookbook_edit"
+            android:layout_height="match_parent"
+            android:digits="1234567890"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="起步价"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_15_80"
+            android:gravity="left"
+            android:text="元/人"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/step_price_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@id/start_price_rl"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_6_80"
+        android:paddingRight="@dimen/width_6_80" >
+
+        <EditText
+            android:id="@+id/step_price_et"
+            style="@style/cookbook_edit"
+            android:layout_height="match_parent"
+            android:digits="1234567890"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="加价幅度"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="元"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/min_price_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@id/step_price_rl"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_6_80"
+        android:paddingRight="@dimen/width_6_80" >
+
+        <EditText
+            android:id="@+id/min_price_et"
+            style="@style/cookbook_edit"
+            android:layout_height="match_parent"
+            android:digits="1234567890"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_centerVertical="true"
+            android:text="最低消费金额"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="元"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/max_person_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_10_80"
+        android:layout_below="@id/min_price_rl"
+        android:background="@drawable/underline_gray_bottom"
+        android:paddingLeft="@dimen/width_6_80"
+        android:paddingRight="@dimen/width_6_80" >
+
+        <EditText
+            android:id="@+id/max_person_et"
+            style="@style/cookbook_edit"
+            android:layout_height="match_parent"
+            android:digits="1234567890"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="最多人数"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+
+        <TextView
+            style="@style/w_w"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:text="人"
+            android:textColor="@color/cooklistinfo_textcolor"
+            android:textSize="@dimen/text_size_7" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/baocun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/max_person_rl"
+        android:layout_marginTop="@dimen/width_2_80"
+        android:background="@color/main_green"
+        android:gravity="center"
+        android:paddingBottom="@dimen/width_2_80"
+        android:paddingTop="@dimen/width_2_80"
+        android:text="更新私房菜"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_7" />
+
+</RelativeLayout>
